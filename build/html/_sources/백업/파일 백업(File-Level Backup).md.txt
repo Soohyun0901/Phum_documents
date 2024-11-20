@@ -1,0 +1,5 @@
+# 파일 백업(File-Level Backup)
+
+##### 파일 백업 정책 설정 단계
+Protect > Backup 버튼을 클릭합니다.   
+(혹은 Jobs > Active Jobs > Create Jobs > Backup버튼 클릭)
