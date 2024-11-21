@@ -50,6 +50,6 @@
 (7) <b>JOB DETAIL</b> 부분은 [상세 스케줄 설정 방법]를 참고하세요.<br>
 (8) 설정 완료되었다면 <b>Save</b>를 눌러 정책 생성을 완료하세요.<br><br>
 
-방금 만든 파일 레벨 백업 정책은 <b>Jobs → Job Manager</b>에서 확인 및 관리할 수 있습니다.<br><br><br>
+방금 만든 파일 레벨 백업 정책은 <b>Jobs → Job Manager</b>에서 확인 및 관리할 수 있습니다.<br><br><br><br><br><br>
 
 

@@ -23,6 +23,12 @@
 
    백업구성 및 절차/정책 관리.md
 
+.. toctree::
+   :maxdepth: 1
+   :caption: 에이전트 관리:
+
+   에이전트 관리/Windows 에이전트 제거.md
+
 
 .. toctree::
    :maxdepth: 1
