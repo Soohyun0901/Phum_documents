@@ -43,3 +43,6 @@ source_parsers = {
     '.md': CommonMarkParser,
 }
 extensions = ['recommonmark']
+
+html_favicon='favicon.ico'
+#html_extra_path = ['source/img']

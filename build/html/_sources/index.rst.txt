@@ -10,11 +10,14 @@
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 5
    :caption: 백업:
 
    백업/파일 백업(File-Level Backup).md
    백업/이미지 백업(Image-Level Backup).md
+   백업/호스트 백업(Host-Level Backup).md
+   백업/NAS 백업.md
+   백업/애플리케이션 백업(Application Backup).md
 
 .. toctree::
    :maxdepth: 2
