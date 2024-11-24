@@ -34,9 +34,7 @@ source_parsers = {
     '.md': CommonMarkParser,
 }
 extensions = ['recommonmark']
-extensions = [
-    'sphinx.ext.duration',
-]
+
 
 html_favicon='favicon.ico'
 #html_extra_path = ['source/img']

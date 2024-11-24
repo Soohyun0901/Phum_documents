@@ -8,12 +8,6 @@
 
 안녕하세요. 유니트렌드 매뉴얼입니다.
 
-Contents
---------
-
-.. toctree::
-
-   usage
 
 .. toctree::
    :maxdepth: 1
