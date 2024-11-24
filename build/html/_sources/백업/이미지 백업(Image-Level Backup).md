@@ -1,4 +1,4 @@
-# 이미지 백업(Image-Level Backup)
+<h1>이미지 백업(Image-Level Backup)</h1>
 
 <br><br>
 Windows 이미지 백업은 블록 가속화(block acceleration) 기술을 사용하여, 특히 수백만 개의 파일이 있는 Windows 서버에서 매우 빠른 백업 성능을 제공합니다.<br>Windows 대상이 디스크 및 볼륨 단위로 백업되기 때문에, 이미지 백업은 파일 백업보다 더 빠른 성능을 제공합니다. 이러한 백업 속도의 향상 덕분에, 더 자주 스냅샷을 생성하여 장애 발생 시 데이터 손실을 최소화할 수 있습니다.<br>  
@@ -7,49 +7,108 @@ Windows 이미지 백업은 블록 가속화(block acceleration) 기술을 사�
 Azure와 Amazon Web Services(AWS) 환경에서는 이미지 백업이 지원되지 않습니다. 대신 에이전트 기반의 파일 백업 및 애플리케이션 백업을 사용하세요.<br><br>
 
 <h4>Windows 이미지 백업을 위한 모범 사례 및 고려 사항</h4> 
- • Microsoft의 권장 사항을 준수하세요.<br>
- • 이미지 백업은 전체(Full) 백업과 증분(Incremental) 백업을 지원합니다.<br>
- • 디스크 또는 볼륨 구성에 변경 사항이 있는 경우 새 전체(Full) 백업이 필요합니다. 이는 디스크의 개수, 크기, 속성 또는 볼륨의 개수, 크기, 속성에 변경이 있을 때를 포함합니다.<br><br>
+ * Microsoft의 권장 사항을 준수하세요.<br>
+ * 이미지 백업은 전체(Full) 백업과 증분(Incremental) 백업을 지원합니다.<br>
+ * 디스크 또는 볼륨 구성에 변경 사항이 있는 경우 새 전체(Full) 백업이 필요합니다. 이는 디스크의 개수, 크기, 속성 또는 볼륨의 개수, 크기, 속성에 변경이 있을 때를 포함합니다.<br><br>
 
 ※ 중요 참고사항:<br>
- • 디스크 또는 볼륨 구성 변경 시<br>
+ * 디스크 또는 볼륨 구성 변경 시<br>
  이전 백업 이후 디스크 또는 볼륨 구성에 변경이 발생하면, 유니트렌드는 다음 백업을 자동으로 전체 백업(Full Backup)으로 전환합니다. (증분 백업을 수동으로 시도하는 경우 전체 백업이 필요하다는 메시지를 표시합니다.)
 한 번의 전체 백업이 성공적으로 수행되면, 이후 증분 백업은 예약된 대로 실행됩니다.<br><br>
 
- • 하나의 대상을 여러 유니트렌드로 백업하지 마세요.<br>
+ * 하나의 대상을 여러 유니트렌드로 백업하지 마세요.<br>
  단일 이미지 백업 대상을 여러 유니트렌드에서 백업하는 것은 권장되지 않습니다. 한 유니트렌드에서 백업을 실행할 때마다 다른 유니트렌드에서의 증분(Incremental) 백업 체인의 무결성이 손상됩니다. 손상된 백업 체인을 복구하기 위해, 유니트렌드는 다음 증분 백업을 자동으로 전체(Full) 백업으로 전환합니다. 이로 인해 여러 기기에서 증분 백업을 실행하면 많은 전체 백업이 생성될 가능성이 높습니다.<br><br>
 
 <h4>Windows 이미지 백업 요구사항</h4>
 Windows 대상에 대한 이미지 백업을 위해 다음 요구사항을 충족해야 합니다:
 <h5>▪ 항목별 요구사항</h5>
-1. 유니트렌드 어플라이언스<br>
-• 유니트렌드 어플라이언스는 10.3 이상(Windows 이미지 복제 기능을 사용하려면 10.5.1 이상)을 실행 중이어야 합니다.<br>
-• Windows 대상에서 유니트렌드 어플라이언스로 인바운드 443/TCP 포트가 열려 있어야 합니다.<br><br>
+⑴ 유니트렌드 어플라이언스<br>
+* 유니트렌드 어플라이언스는 10.3 이상(Windows 이미지 복제 기능을 사용하려면 10.5.1 이상)을 실행 중이어야 합니다.<br>
+* Windows 대상에서 유니트렌드 어플라이언스로 인바운드 443/TCP 포트가 열려 있어야 합니다.<br><br>
 
-2. Windows 에이전트<br>
-• Windows 대상에서 유니트렌드 에이전트는 10.3 이상 버전을 실행 중이어야 하며, Volume CBT 드라이버가 설치되어야 합니다. (Windows 이미지 복제 기능을 사용하려면 에이전트 버전 10.5.1 이상이 필요)<br>
-• Volume CBT 드라이버 설치 옵션은 유니트렌드 에이전트 설치 중에 표시됩니다.<br>
-&nbsp; &nbsp; &nbsp; &nbsp; • Volume CBT 드라이버는 Windows 이미지 증분 백업을 실행하는 데 필요합니다.<br>
-&nbsp; &nbsp; &nbsp; &nbsp; • Volume CBT 드라이버는 설치 후 <b>Windows 대상을 재부팅해야 활성화</b>됩니다.<br>
+⑵ Windows 에이전트<br>
+* Windows 대상에서 유니트렌드 에이전트는 10.3 이상 버전을 실행 중이어야 하며, Volume CBT 드라이버가 설치되어야 합니다. (Windows 이미지 복제 기능을 사용하려면 에이전트 버전 10.5.1 이상이 필요)<br>
+* Volume CBT 드라이버 설치 옵션은 유니트렌드 에이전트 설치 중에 표시됩니다.<br>
+    * Volume CBT 드라이버는 Windows 이미지 증분 백업을 실행하는 데 필요합니다.<br>
+    * Volume CBT 드라이버는 설치 후 <b>Windows 대상을 재부팅해야 활성화</b>됩니다.<br>
 
-※ 
+※ 참고 사항: <br>
+* Volume CBT 드라이버가 설치되지 않았거나 활성화되지 않은 경우, 이미지 증분 백업은 지원되지 않습니다.<br>
+    * 다음 증분 백업 스케줄은 자동으로 전체(Full) 백업으로 전환됩니다.<br>
+    * 수동으로 증분 백업을 실행하려고 하면 "전체 백업만 지원된다"는 메시지가 표시됩니다.<br>
+* Hyper-V 서버의 제한 사항:<br>
+    * Hyper-V CBT 드라이버는 10.1.0-3 이전 버전의 에이전트를 실행하는 Hyper-V 서버에 설치할 수 없습니다.<br>
+    * 이 경우, 최신 에이전트를 설치하기 전에 이전 Windows 에이전트를 수동으로 제거해야 합니다.<br> 자세한 내용은 Windows 에이전트 제거(C:\doc_wiki\source\에이전트 관리\Windows 에이전트 제거.md)를 참조하세요.<br><br>
 
-<h4> ▪ 파일 레벨 백업 요구사항<br></h4>
-※ 파일 레벨 백업을 위해서는 대상 시스템에 Unitrends 에이전트를 설치해야 합니다.<br>
-에이전트 설치 절차는 운영체제에 따라 다르므로, 자세한 내용은 [Unitrends 에이전트 설치 가이드]를 참고하세요.<br><br>
-에이전트 설치 후, [에이전트 기반의 백업 대상 추가] 페이지를 참조하여 대상을 유니트렌드 어플라이언스에 추가한 다음,
-백업 정책을 생성합니다.
 
-<br><br>
-<h4> ▪ 파일 백업 정책 설정 단계</h4>
+⑶ Windows 대상 운영체제<br>
+다음은 지원되는 운영체제 목록입니다.<br>
+PC 운영체제: <br>
+* Windows 11 (64비트 전용)<br>
+* Windows 10 (64비트 전용)<br>
+* Windows 8.1 (64비트 전용)<br>
+* Windows 8 (64비트 전용)<br>
+* Windows 7 with SP1 (64비트 전용)<br>
+서버 운영체제: <br>
+* Windows Server 2022 (64비트 전용)<br>
+* Windows Server 2019 (64비트 전용)<br>
+* Windows Server 2016 (64비트 전용)<br>
+* Windows Server 2012 R2 (64비트 전용)<br>
+* Windows Server 2012 (64비트 전용)<br>
+* Windows Server 2008 with SP1 (64비트 전용)<br><br>
+
+※ 참고 사항: <br>
+Windows Server 2008 R2 SP1에 대해 추가 요구사항이 적용됩니다.<br>
+* Windows Server 2008 R2 x64 에디션 업데이트를 설치해야 합니다.<br>
+* Windows 7 x64 기반 시스템용 보안 업데이트를 설치해야 합니다.<br>
+(이 업데이트가 설치되지 않은 경우, 에이전트 설치 중 업데이트 설치를 요청받게 됩니다.)<br>
+* 유니트렌드 Volume CBT 드라이버는 에이전트 설치와 함께 진행되지 않고, 수동으로 설치해야 합니다.<br>
+* 에이전트 설치 과정에서 드라이버 설치 파일이 아래 경로에 생성됩니다.<br>
+    * C:\PCBP\Installers\uvcbt.msi<br><br>
+
+⑷ Windows 대상 디스크 구성<br>
+이미지 백업은 기본 디스크로 구성된 Windows 대상에서만 지원됩니다.<br>
+* 동적(Dynamic) 디스크는 지원되지 않습니다.<br>
+* 오프라인 디스크도 이미지 백업에 포함됩니다.<br><br>
+
+⑸ Windows 대상 디스크 파티션 유형<br>
+* 이미지 백업은 GUID 파티션 테이블(GPT) 파티션과 마스터 부트 레코드(MBR) 파티션에서 모두 지원됩니다.<br><br>
+
+⑹ Windows 대상 파일시스템 구성<br>
+* 이미지 백업은 다음 파일시스템에서 지원됩니다: NTFS, FAT, FAT32, exFAT, ReFS.<br>
+※ 참고: Microsoft의 제한으로 인해 FAT, FAT32, exFAT 볼륨에서는 VSS 스냅샷을 생성할 수 없습니다.<br>
+* 백업 작업 중 데이터가 변경되면, 이러한 볼륨의 백업 데이터는 일관된 상태가 아닐 수 있습니다.<br><br>
+
+⑺ Windows 대상 볼륨 구성<br>
+이미지 백업은 읽기 전용 디스크에서는 지원되지 않습니다.<br>
+* 백업 작업에는 읽기 전용 디스크의 모든 볼륨을 제외하거나 파일 백업을 실행해야 합니다.<br>
+* 읽기 전용 볼륨이 제외되지 않으면 이미지 백업은 실패합니다.<br>
+* 이미지 백업은 로컬 볼륨으로 마운트된 VHD 또는 VHDX 파일에서도 지원되지 않습니다.<br>
+※ 참고: <br>
+<ul>
+<li>이동식 미디어는 이미지 백업에서 자동으로 제외됩니다.</li>
+<li>이동식 미디어에 있는 읽기 전용 디스크의 볼륨을 별도로 제외할 필요할 필요는 없습니다.</li>
+<ul>
+
+⑻ Multi-point Services Role과 RDS User Profile Disks<br>
+이미지 백업에서 Multi-point Services Role과 RDS User Profile Disks는 지원되지 않습니다.<br><br>
+
+⑼ 이미지 백업 지원되지 않는 Windows 기능<br>
+아래 기능은 이미지 백업이 지원되지 않기 때문에, 파일 백업을 사용해야 합니다.:<br>
+* Windows Storage Spaces<br>
+* 클러스터 공유 볼륨(CSVs)<br>
+* Windows Server 장애 조치 클러스터(WSFCs)<br>
+* 분산 파일시스템(DFS) 환경<br><br>
+
+<h4> ▪ 이미지 백업 정책 설정 단계</h4>
 (1) <b>Jobs → +Create Job</b> 버튼을 클릭하여 <b>Backup</b>을 선택합니다.<br><br>
 ![screenshot-1](../img/screenshot-1.png)
 
 (2) 좌측 <b>INVENTORY</b> 영역에서 토글을 열어 백업 대상을 선택합니다.<br>
-&nbsp; &nbsp; &nbsp; &nbsp; - 백업 대상을 등록된 이름으로 찾으려면 아래 <b>Search</b> 필드를 사용하세요.<br>
-&nbsp; &nbsp; &nbsp; &nbsp; - 기본적으로 유니트렌드에 등록된 대상만 나열됩니다.<br>
-&nbsp; &nbsp; &nbsp; &nbsp; - <i><b>What do you want to backup?</b></i>에서 백업 유형을 선택합니다.<br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ex) File Level, Image Level, VMware, SQL 등<br><br>
+    * 백업 대상을 등록된 이름으로 찾으려면 아래 <b>Search</b> 필드를 사용하세요.<br>
+    * 기본적으로 유니트렌드에 등록된 대상만 나열됩니다.<br>
+    * <i><b>What do you want to backup?</b></i>에서 백업 유형을 선택합니다.<br>
+        * ex) File Level, Image Level, VMware, SQL 등<br><br>
 ![screenshot-2](../img/screenshot-2.png)
 
 (3) 우측 <b>JOB INVENTORY SETTINGS</b>의 <b>Edit</b>을 눌러 포함하거나 제외할 백업 경로를 선택합니다.<br>
