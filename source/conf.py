@@ -16,25 +16,16 @@ release = '1.0.0'
 
 extensions = []
 
-templates_path = ['_templates']
-exclude_patterns = []   
+#templates_path = ['_templates']
+#exclude_patterns = []   
 
 language = 'ko'
 
 # -- Options for HTML output -------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-#html_theme = 'readable'
-#html_theme_path = ['C:\doc_wiki']
-#html_static_path = ['_static']
-#import sphinx_readable_theme
-#html_theme = 'readable'
-#html_theme_path = [sphinx_readable_theme.get_html_theme_path()]
+
 html_theme = 'sphinx_book_theme'
 
-#import os   # 기존주석 해제
-#import sys  # 기존주석 해제
-#sys.path.insert(0, os.path.abspath('.')) # 기존주석 해제
 
 # 다음코드 추가
 from recommonmark.parser import CommonMarkParser
@@ -43,6 +34,9 @@ source_parsers = {
     '.md': CommonMarkParser,
 }
 extensions = ['recommonmark']
+extensions = [
+    'sphinx.ext.duration',
+]
 
 html_favicon='favicon.ico'
 #html_extra_path = ['source/img']
