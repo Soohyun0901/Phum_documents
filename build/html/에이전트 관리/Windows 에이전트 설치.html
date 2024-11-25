@@ -156,6 +156,8 @@
 <li class="toctree-l1"><a class="reference internal" href="Linux%20%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%20%EC%A0%9C%EA%B1%B0.html">Linux 에이전트 제거</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Windows 에이전트 설치</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Windows%20%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%20%EC%A0%9C%EA%B1%B0.html">Windows 에이전트 제거</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Volume%20CBT%20Driver%20%EC%84%A4%EC%B9%98%20%EB%B0%8F%20%EC%A0%9C%EA%B1%B0.html">Volume CBT Driver 설치 및 제거</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Windows%20%EB%B0%8F%20Linux%20%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%EC%9D%98%20%EB%B3%B4%EC%95%88%20%ED%8E%98%EC%96%B4%EB%A7%81.html">Windows 및 Linux 에이전트의 보안 페어링</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">백업:</span></p>
 <ul class="nav bd-sidenav">
@@ -309,11 +311,11 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">에이전트 설치 전 요구사항</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">에이전트 보안 페어링 요구사항</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Windows 에이전트 설치 방법</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">설치 후</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">설치 후 주의사항</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#span-style-background-color-dcffe4-span"><span style="background-color: #dcffe4;">에이전트 설치 전 요구사항</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><span style="background-color: #dcffe4;">에이전트 보안 페어링 요구사항</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#span-style-background-color-dcffe4-windows-span"><span style="background-color: #dcffe4;">Windows 에이전트 설치 단계</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><span style="background-color: #dcffe4;">설치 후</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><span style="background-color: #dcffe4;">설치 후 주의사항</span></a></li>
 </ul>
             </nav>
         </div>
@@ -329,8 +331,8 @@
 <h1>Windows 에이전트 설치<a class="headerlink" href="#windows" title="Link to this heading">#</a></h1>
 <p>Windows 대상을 백업하려면 해당 Windows에 에이전트를 설치해야 합니다.<br>
 이 에이전트는 <b>파일 백업(File-Level), 이미지 백업(Image-Level) 및 애플리케이션 백업(application)</b>을 실행하는 데 필요합니다.<br><br></p>
-<section id="id1">
-<h2>에이전트 설치 전 요구사항<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<section id="span-style-background-color-dcffe4-span">
+<h2><span style="background-color: #dcffe4;">에이전트 설치 전 요구사항</span><a class="headerlink" href="#span-style-background-color-dcffe4-span" title="Link to this heading">#</a></h2>
 <p>Windows 에이전트를 설치하기 전에 아래 요구사항을 충족해야 합니다.<br></p>
 <p>① Unitrends 어플라이언스와 에이전트 버전 호환성<br></p>
 <ul class="simple">
@@ -353,8 +355,8 @@
 <li><p>서버 보안 및 백신 프로그램이 실행 중이라면, [방화벽 예외처리]를 참조해주세요.</p></li>
 </ul>
 </section>
-<section id="id2">
-<h2>에이전트 보안 페어링 요구사항<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h2><span style="background-color: #dcffe4;">에이전트 보안 페어링 요구사항</span><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p>10.6.6 버전부터 Unitrends 어플라이언스와 Windows 에이전트는 보안 페어링(secure pairing)을 지원합니다.<br>
 이 페어링은 TLS(Transport Layer Security)를 사용해 데이터를 암호화하고, 연결을 인증합니다.<br>
 보안 페어링 기능은 다음 조건을 충족해야 실행됩니다.:</p>
@@ -382,8 +384,8 @@
 <li><p>이러한 운영체제를 백업하려면 <b>10.6.7 버전의 에이전트</b>를 설치해야 합니다. 해당 버전은 보안 페어링 기능을 비활성화합니다.</p></li>
 </ul>
 </section>
-<section id="id3">
-<h2>Windows 에이전트 설치 방법<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<section id="span-style-background-color-dcffe4-windows-span">
+<h2><span style="background-color: #dcffe4;">Windows 에이전트 설치 단계</span><a class="headerlink" href="#span-style-background-color-dcffe4-windows-span" title="Link to this heading">#</a></h2>
 <p>(1) MSI 에이전트 파일 다운로드</p>
 <ul class="simple">
 <li><p>[Unitrends Downloads] 페이지에서 적합한 에이전트 설치 파일을 다운로드하세요.:</p>
@@ -432,8 +434,8 @@
 </li>
 </ul>
 </section>
-<section id="id4">
-<h2>설치 후<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<section id="id2">
+<h2><span style="background-color: #dcffe4;">설치 후</span><a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <p>(1) 설치 위치</p>
 <ul class="simple">
 <li><p>에이전트는 Windows 시스템 드라이브(일반적으로 C:)의 C:\PCBP 디렉토리에 설치됩니다.
@@ -447,8 +449,8 @@
 </li>
 </ul>
 </section>
-<section id="id5">
-<h2>설치 후 주의사항<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<section id="id3">
+<h2><span style="background-color: #dcffe4;">설치 후 주의사항</span><a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <p>(1) 증분 백업 지원</p>
 <ul class="simple">
 <li><p>Volume CBT 드라이버가 설치되지 않거나 활성화되지 않으면 <b>이미지 증분 백업은 지원되지 않습니다.</b></p></li>
@@ -512,11 +514,11 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">에이전트 설치 전 요구사항</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">에이전트 보안 페어링 요구사항</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Windows 에이전트 설치 방법</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">설치 후</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">설치 후 주의사항</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#span-style-background-color-dcffe4-span"><span style="background-color: #dcffe4;">에이전트 설치 전 요구사항</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><span style="background-color: #dcffe4;">에이전트 보안 페어링 요구사항</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#span-style-background-color-dcffe4-windows-span"><span style="background-color: #dcffe4;">Windows 에이전트 설치 단계</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><span style="background-color: #dcffe4;">설치 후</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><span style="background-color: #dcffe4;">설치 후 주의사항</span></a></li>
 </ul>
   </nav></div>
 

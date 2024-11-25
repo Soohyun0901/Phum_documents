@@ -20,9 +20,12 @@
 
 .. toctree::
    :maxdepth: 1
-   :caption: 백업구성 및 절차:
+   :caption: 기본 설정:
 
-   백업구성 및 절차/정책 관리.md
+   기본 설정/정책 관리.md
+   기본 설정/백업 대상 등록.md
+   기본 설정/모니터링 방법.md
+   기본 설정/백업 모드 및 정책 설정.md
 
 .. toctree::
    :maxdepth: 1
@@ -33,7 +36,7 @@
    에이전트 관리/Windows 에이전트 설치.md
    에이전트 관리/Windows 에이전트 제거.md
    에이전트 관리/Volume CBT Driver 설치 및 제거.md
-
+   에이전트 관리/Windows 및 Linux 에이전트의 보안 페어링.md
 
 .. toctree::
    :maxdepth: 1

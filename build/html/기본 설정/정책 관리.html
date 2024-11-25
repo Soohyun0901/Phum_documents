@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>백업 대상(Protected Assets) &#8212; doc 1.0.0 문서</title>
+    <title>상세 스케줄 설정 방법 &#8212; doc 1.0.0 문서</title>
   
   
   
@@ -44,12 +44,12 @@
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../_static/translations.js?v=afa94a99"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '구성/백업 대상(Protected Assets)';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '기본 설정/정책 관리';</script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="색인" href="../genindex.html" />
     <link rel="search" title="검색" href="../search.html" />
-    <link rel="next" title="상세 스케줄 설정 방법" href="../%EA%B8%B0%EB%B3%B8%20%EC%84%A4%EC%A0%95/%EC%A0%95%EC%B1%85%20%EA%B4%80%EB%A6%AC.html" />
-    <link rel="prev" title="소산 대상(Backup Copy Target)" href="%EC%86%8C%EC%82%B0%20%EB%8C%80%EC%83%81%28Backup%20Copy%20Target%29.html" />
+    <link rel="next" title="백업 대상 등록" href="%EB%B0%B1%EC%97%85%20%EB%8C%80%EC%83%81%20%EB%93%B1%EB%A1%9D.html" />
+    <link rel="prev" title="백업 대상(Protected Assets)" href="../%EA%B5%AC%EC%84%B1/%EB%B0%B1%EC%97%85%20%EB%8C%80%EC%83%81%28Protected%20Assets%29.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ko"/>
   <meta name="docsearch:version" content="" />
@@ -140,18 +140,17 @@
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">구성:</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="%EC%96%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4%20%EC%84%A4%EC%A0%95.html">유니트렌드 어플라이언스 설정</a></li>
-<li class="toctree-l1"><a class="reference internal" href="%EB%B0%B1%EC%97%85%20%EC%A0%80%EC%9E%A5%EC%86%8C.html">백업 저장소</a></li>
-<li class="toctree-l1"><a class="reference internal" href="%EC%86%8C%EC%82%B0%20%EB%8C%80%EC%83%81%28Backup%20Copy%20Target%29.html">소산 대상(Backup Copy Target)</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">백업 대상(Protected Assets)</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../%EA%B5%AC%EC%84%B1/%EC%96%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4%20%EC%84%A4%EC%A0%95.html">유니트렌드 어플라이언스 설정</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%EA%B5%AC%EC%84%B1/%EB%B0%B1%EC%97%85%20%EC%A0%80%EC%9E%A5%EC%86%8C.html">백업 저장소</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%EA%B5%AC%EC%84%B1/%EC%86%8C%EC%82%B0%20%EB%8C%80%EC%83%81%28Backup%20Copy%20Target%29.html">소산 대상(Backup Copy Target)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%EA%B5%AC%EC%84%B1/%EB%B0%B1%EC%97%85%20%EB%8C%80%EC%83%81%28Protected%20Assets%29.html">백업 대상(Protected Assets)</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">기본 설정:</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../%EA%B8%B0%EB%B3%B8%20%EC%84%A4%EC%A0%95/%EC%A0%95%EC%B1%85%20%EA%B4%80%EB%A6%AC.html">상세 스케줄 설정 방법</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../%EA%B8%B0%EB%B3%B8%20%EC%84%A4%EC%A0%95/%EB%B0%B1%EC%97%85%20%EB%8C%80%EC%83%81%20%EB%93%B1%EB%A1%9D.html">백업 대상 등록</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../%EA%B8%B0%EB%B3%B8%20%EC%84%A4%EC%A0%95/%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81%20%EB%B0%A9%EB%B2%95.html">모니터링 방법</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../%EA%B8%B0%EB%B3%B8%20%EC%84%A4%EC%A0%95/%EB%B0%B1%EC%97%85%20%EB%AA%A8%EB%93%9C%20%EB%B0%8F%20%EC%A0%95%EC%B1%85%20%EC%84%A4%EC%A0%95.html">백업 모드 및 정책 설정</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">상세 스케줄 설정 방법</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%EB%B0%B1%EC%97%85%20%EB%8C%80%EC%83%81%20%EB%93%B1%EB%A1%9D.html">백업 대상 등록</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%EB%B0%B1%EC%97%85%20%EB%AA%A8%EB%93%9C%20%EB%B0%8F%20%EC%A0%95%EC%B1%85%20%EC%84%A4%EC%A0%95.html">백업 모드 및 정책 설정</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">에이전트 관리:</span></p>
 <ul class="nav bd-sidenav">
@@ -228,7 +227,7 @@
       
       
       
-      <li><a href="../_sources/구성/백업 대상(Protected Assets).md" target="_blank"
+      <li><a href="../_sources/기본 설정/정책 관리.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="소스 파일 다운로드"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -291,9 +290,7 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="검색" aria-label="검색" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -304,19 +301,11 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>백업 대상(Protected Assets)</h1>
+    <h1>상세 스케줄 설정 방법</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> 내용 </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#span-style-background-color-dcffe4-span"><span style="background-color: #dcffe4;">모든 대상 시스템 확인</span></a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -326,28 +315,8 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="protected-assets">
-<h1>백업 대상(Protected Assets)<a class="headerlink" href="#protected-assets" title="Link to this heading">#</a></h1>
-<p>이 절차를 사용하여 대상 시스템을 확인하고, 추가하고, 편집하고, 제거합니다.
-자산을 관리하려면 다음 항목을 참조하세요.</p>
-<section id="span-style-background-color-dcffe4-span">
-<h2><span style="background-color: #dcffe4;">모든 대상 시스템 확인</span><a class="headerlink" href="#span-style-background-color-dcffe4-span" title="Link to this heading">#</a></h2>
-<p>(1) Configure → Protected Assets를 선택합니다.<br>
-(2) 인벤토리 트리에 대상 시스템이 표시됩니다.</p>
-<ul class="simple">
-<li><p>각 물리 대상과 가상 호스트는 최상위 노드로 표시됩니다.</p></li>
-<li><p>각 애플리케이션은 호스트 대상 아래에 하위 노드로 표시됩니다.</p></li>
-<li><p>각 VM은 가상 호스트 아래에 하위 노드로 표시됩니다.
-(3) 표시 옵션:<br></p></li>
-<li><p>열 이름 옆에 있는 화살표를 클릭하면 값을 오름차순이나 내림차순으로 정렬할 수 있습니다.</p></li>
-<li><p>입력한 문자열이 포함된 행만 표시하려면 열의 필터 필드에 텍스트를 입력하세요.</p></li>
-<li><p>열 설명:<br>
-| 열 | 설명 |
-|:———–:|:————:|
-| 내용1 | 내용2 |
-| 내용4 | 내용5 |</p></li>
-</ul>
-</section>
+  <section id="id1">
+<h1>상세 스케줄 설정 방법<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 </section>
 
 
@@ -362,20 +331,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="%EC%86%8C%EC%82%B0%20%EB%8C%80%EC%83%81%28Backup%20Copy%20Target%29.html"
+       href="../%EA%B5%AC%EC%84%B1/%EB%B0%B1%EC%97%85%20%EB%8C%80%EC%83%81%28Protected%20Assets%29.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">이전</p>
-        <p class="prev-next-title">소산 대상(Backup Copy Target)</p>
+        <p class="prev-next-title">백업 대상(Protected Assets)</p>
       </div>
     </a>
     <a class="right-next"
-       href="../%EA%B8%B0%EB%B3%B8%20%EC%84%A4%EC%A0%95/%EC%A0%95%EC%B1%85%20%EA%B4%80%EB%A6%AC.html"
+       href="%EB%B0%B1%EC%97%85%20%EB%8C%80%EC%83%81%20%EB%93%B1%EB%A1%9D.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">다음</p>
-        <p class="prev-next-title">상세 스케줄 설정 방법</p>
+        <p class="prev-next-title">백업 대상 등록</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -385,22 +354,6 @@
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> 내용
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#span-style-background-color-dcffe4-span"><span style="background-color: #dcffe4;">모든 대상 시스템 확인</span></a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
