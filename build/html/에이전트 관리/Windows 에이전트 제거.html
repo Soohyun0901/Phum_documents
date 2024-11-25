@@ -49,7 +49,7 @@
     <link rel="index" title="색인" href="../genindex.html" />
     <link rel="search" title="검색" href="../search.html" />
     <link rel="next" title="파일 레벨 백업(File-Level Backup)" href="../%EB%B0%B1%EC%97%85/%ED%8C%8C%EC%9D%BC%20%EB%B0%B1%EC%97%85%28File-Level%20Backup%29.html" />
-    <link rel="prev" title="Widnows 에이전트 설치" href="Windows%20%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%20%EC%84%A4%EC%B9%98.html" />
+    <link rel="prev" title="Windows 에이전트 설치" href="Windows%20%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%20%EC%84%A4%EC%B9%98.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ko"/>
   <meta name="docsearch:version" content="" />
@@ -154,7 +154,7 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Linux%20%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%20%EC%84%A4%EC%B9%98.html">Linux 에이전트 설치</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Linux%20%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%20%EC%A0%9C%EA%B1%B0.html">Linux 에이전트 제거</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Windows%20%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%20%EC%84%A4%EC%B9%98.html">Widnows 에이전트 설치</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Windows%20%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%20%EC%84%A4%EC%B9%98.html">Windows 에이전트 설치</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Windows 에이전트 제거</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">백업:</span></p>
@@ -286,7 +286,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="검색" aria-label="검색" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -302,6 +304,15 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> 내용 </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#span-style-background-color-f1f8ff-windows-span"><span style="background-color: #f1f8ff;">Windows 에이전트 제거 방법</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#span-style-background-color-f1f8ff-span"><span style="background-color: #f1f8ff;">결과</span></a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -313,6 +324,39 @@
                   
   <section id="windows">
 <h1>Windows 에이전트 제거<a class="headerlink" href="#windows" title="Link to this heading">#</a></h1>
+<p>Unitrends 에이전트를 안전하게 제거하려면 아래 단계를 따르세요:<br></p>
+<blockquote>
+<div><p>※ 중요사항</p>
+<ul class="simple">
+<li><p>명령줄(Command Line) 설치를 사용한 경우:</p>
+<ul>
+<li><p>에이전트를 명령줄 방식으로 설치한 경우, 동일한 방식으로 에이전트를 제거해야 합니다.</p></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+<section id="span-style-background-color-f1f8ff-windows-span">
+<h2><span style="background-color: #f1f8ff;">Windows 에이전트 제거 방법</span><a class="headerlink" href="#span-style-background-color-f1f8ff-windows-span" title="Link to this heading">#</a></h2>
+<p>(1) 프로그램 추가/제거로 이동:<br></p>
+<ul class="simple">
+<li><p>Windows의 프로그램 추가/제거 인터페이스를 엽니다.</p></li>
+<li><p>목록에서 Unitrends Agent를 선택합니다.</p></li>
+</ul>
+<p>(2) 제거 실행:<br></p>
+<ul class="simple">
+<li><p>Uninstall(제거) 버튼을 클릭합니다.</p></li>
+<li><p>확인 창이 뜨면 Yes(예)를 클릭하여 제거를 확인합니다.</p></li>
+</ul>
+<p>(3) Volume CBT 드라이버 제거(필요 시):<br></p>
+<ul class="simple">
+<li><p>필요에 따라 위와 동일한 정차를 반복하여 Unitrends Volume CBT Driver도 제거합니다.</p></li>
+</ul>
+</section>
+<section id="span-style-background-color-f1f8ff-span">
+<h2><span style="background-color: #f1f8ff;">결과</span><a class="headerlink" href="#span-style-background-color-f1f8ff-span" title="Link to this heading">#</a></h2>
+<p>이 단계를 완료하면 Unitrends 에이전트가 안전하게 제거됩니다.<br>
+명령줄로 설치한 경우에는 명령줄 방식을 사용해야 한다는 점을 기억하세요.<br><br><br></p>
+</section>
 </section>
 
 
@@ -332,7 +376,7 @@
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">이전</p>
-        <p class="prev-next-title">Widnows 에이전트 설치</p>
+        <p class="prev-next-title">Windows 에이전트 설치</p>
       </div>
     </a>
     <a class="right-next"
@@ -350,6 +394,23 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 내용
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#span-style-background-color-f1f8ff-windows-span"><span style="background-color: #f1f8ff;">Windows 에이전트 제거 방법</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#span-style-background-color-f1f8ff-span"><span style="background-color: #f1f8ff;">결과</span></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
