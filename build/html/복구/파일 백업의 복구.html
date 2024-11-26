@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>백업 대상(Protected Assets) &#8212; doc 1.0.0 문서</title>
+    <title>파일 백업의 복구 절차 &#8212; doc 1.0.0 문서</title>
   
   
   
@@ -44,12 +44,12 @@
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../_static/translations.js?v=afa94a99"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '구성/백업 대상(Protected Assets)';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '복구/파일 백업의 복구';</script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="색인" href="../genindex.html" />
     <link rel="search" title="검색" href="../search.html" />
-    <link rel="next" title="상세 스케줄 설정 방법" href="../%EA%B8%B0%EB%B3%B8%20%EC%84%A4%EC%A0%95/%EC%A0%95%EC%B1%85%20%EA%B4%80%EB%A6%AC.html" />
-    <link rel="prev" title="소산 대상(Backup Copy Target)" href="%EC%86%8C%EC%82%B0%20%EB%8C%80%EC%83%81%28Backup%20Copy%20Target%29.html" />
+    <link rel="next" title="이미지 백업의 복구 절차" href="%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EB%B0%B1%EC%97%85%EC%9D%98%20%EB%B3%B5%EA%B5%AC.html" />
+    <link rel="prev" title="애플리케이션 백업(Application Backup)" href="../%EB%B0%B1%EC%97%85/%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98%20%EB%B0%B1%EC%97%85%28Application%20Backup%29.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ko"/>
   <meta name="docsearch:version" content="" />
@@ -140,11 +140,11 @@
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">구성:</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="%EC%96%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4%20%EC%84%A4%EC%A0%95.html">유니트렌드 어플라이언스 설정</a></li>
-<li class="toctree-l1"><a class="reference internal" href="%EB%B0%B1%EC%97%85%20%EC%A0%80%EC%9E%A5%EC%86%8C.html">백업 저장소</a></li>
-<li class="toctree-l1"><a class="reference internal" href="%EC%86%8C%EC%82%B0%20%EB%8C%80%EC%83%81%28Backup%20Copy%20Target%29.html">소산 대상(Backup Copy Target)</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">백업 대상(Protected Assets)</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../%EA%B5%AC%EC%84%B1/%EC%96%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4%20%EC%84%A4%EC%A0%95.html">유니트렌드 어플라이언스 설정</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%EA%B5%AC%EC%84%B1/%EB%B0%B1%EC%97%85%20%EC%A0%80%EC%9E%A5%EC%86%8C.html">백업 저장소</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%EA%B5%AC%EC%84%B1/%EC%86%8C%EC%82%B0%20%EB%8C%80%EC%83%81%28Backup%20Copy%20Target%29.html">소산 대상(Backup Copy Target)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%EA%B5%AC%EC%84%B1/%EB%B0%B1%EC%97%85%20%EB%8C%80%EC%83%81%28Protected%20Assets%29.html">백업 대상(Protected Assets)</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">기본 설정:</span></p>
 <ul class="nav bd-sidenav">
@@ -171,9 +171,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../%EB%B0%B1%EC%97%85/%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98%20%EB%B0%B1%EC%97%85%28Application%20Backup%29.html">애플리케이션 백업(Application Backup)</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">복구:</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%ED%8C%8C%EC%9D%BC%20%EB%B0%B1%EC%97%85%EB%B3%B8%20%EB%B3%B5%EA%B5%AC.html">전체 복구</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EB%B0%B1%EC%97%85%EB%B3%B8%20%EB%B3%B5%EA%B5%AC.html">파일단위 복구</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">파일 백업의 복구 절차</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EB%B0%B1%EC%97%85%EC%9D%98%20%EB%B3%B5%EA%B5%AC.html">이미지 백업의 복구 절차</a></li>
 </ul>
 
     </div>
@@ -228,7 +228,7 @@
       
       
       
-      <li><a href="../_sources/구성/백업 대상(Protected Assets).md" target="_blank"
+      <li><a href="../_sources/복구/파일 백업의 복구.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="소스 파일 다운로드"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -304,7 +304,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>백업 대상(Protected Assets)</h1>
+    <h1>파일 백업의 복구 절차</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -314,7 +314,9 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#span-style-background-color-dcffe4-span"><span style="background-color: #dcffe4;">모든 대상 시스템 확인</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#span-style-background-color-dcffe4-recovery-point-span"><span style="background-color: #dcffe4;">복구 지점(Recovery Point)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#span-style-background-color-dcffe4-span"><span style="background-color: #dcffe4;">전체 복구</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><span style="background-color: #dcffe4;">개별 파일 복구</span></a></li>
 </ul>
             </nav>
         </div>
@@ -326,34 +328,106 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="protected-assets">
-<h1>백업 대상(Protected Assets)<a class="headerlink" href="#protected-assets" title="Link to this heading">#</a></h1>
-<p>이 절차를 사용하여 대상 시스템을 확인하고, 추가하고, 편집하고, 제거합니다.
-자산을 관리하려면 다음 항목을 참조하세요.</p>
-<section id="span-style-background-color-dcffe4-span">
-<h2><span style="background-color: #dcffe4;">모든 대상 시스템 확인</span><a class="headerlink" href="#span-style-background-color-dcffe4-span" title="Link to this heading">#</a></h2>
-<p>(1) Configure → Protected Assets를 선택합니다.<br>
-(2) 인벤토리 트리에 대상 시스템이 표시됩니다.</p>
+  <section id="id1">
+<h1>파일 백업의 복구 절차<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>백업 에이전트를 사용해 실행한 파일 백업의 복구 절차에 대해 설명합니다.</p>
 <ul class="simple">
-<li><p>각 물리 대상과 가상 호스트는 최상위 노드로 표시됩니다.</p></li>
-<li><p>각 애플리케이션은 호스트 대상 아래에 하위 노드로 표시됩니다.</p></li>
-<li><p>각 VM은 가상 호스트 아래에 하위 노드로 표시됩니다.
-(3) 표시 옵션:<br></p></li>
-<li><p>열 이름 옆에 있는 화살표를 클릭하면 값을 오름차순이나 내림차순으로 정렬할 수 있습니다.</p></li>
-<li><p>입력한 문자열이 포함된 행만 표시하려면 열의 필터 필드에 텍스트를 입력하세요.</p></li>
-<li><p>열 설명:<br></p>
+<li><p>대상 시스템은 이 절차를 실행하기 전에 유효한 백업본을 가지고 있어야 합니다.</p></li>
+</ul>
+<blockquote>
+<div><p>※ 참고:<br></p>
+<ul class="simple">
+<li><p>이 페이지에서 설명하는 모든 절차는 모든 운영체제의 파일 백업 복구에 적용됩니다.</p></li>
+</ul>
+</div></blockquote>
+<section id="span-style-background-color-dcffe4-recovery-point-span">
+<h2><span style="background-color: #dcffe4;">복구 지점(Recovery Point)</span><a class="headerlink" href="#span-style-background-color-dcffe4-recovery-point-span" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>각 백업은 자산 전체의 복구 지점을 생성합니다. 이 복구 지점에는 백업 작업 동안 캡처된 데이터와 함께 백업 그룹 내 모든 종속 데이터가 포함됩니다.</p></li>
+<li><p>전체 백업을 복구하거나 특정 파일을 선택적으로 복구할 수 있습니다.</p>
 <ul>
-<li><p>Name:</p></li>
-<li><p>Address:</p></li>
-<li><p>Description:</p></li>
-<li><p>Pairing:</p></li>
-<li><p>Credentials:</p></li>
-<li><p>Retention:</p></li>
-<li><p>Encrypted:</p></li>
-<li><p>Agent Version:</p></li>
-<li><p>Appliance:</p></li>
+<li><p>전체 백업 복구는 그룹 내 모든 종속 데이터를 복구합니다.</p></li>
+<li><p>예를 들어, 증분 백업을 복구하면 해당 증분 백업의 상위 전체 백업부터 모두 복구됩니다.</p></li>
 </ul>
 </li>
+</ul>
+</section>
+<section id="span-style-background-color-dcffe4-span">
+<h2><span style="background-color: #dcffe4;">전체 복구</span><a class="headerlink" href="#span-style-background-color-dcffe4-span" title="Link to this heading">#</a></h2>
+<p>(1) 백업본 선택:<br>
+<b>Backup Catalog</b> 또는 <b>Backup Browser</b>에서 선택할 수 있습니다.</p>
+<ul class="simple">
+<li><p>Backup Catalog:</p>
+<ul>
+<li><p>백업 카탈로그에서는 백업본이 아래에 표시됩니다.</p></li>
+<li><p>우측 <b>FILTER BACKUPS</b>에서 날짜 및 표시 형식을 지정할 수 있습니다.</p></li>
+<li><p>표시되는 대상을 확장하면 해당 시스템의 백업본을 확인할 수 있습니다.
+<img alt="screenshot-18" src="../_images/screenshot-18.png" /></p></li>
+</ul>
+</li>
+<li><p>Backup Browser:</p>
+<ul>
+<li><p>백업 브라우저는 고급 검색 및 필터 옵션을 제공합니다.</p></li>
+<li><p>Unitrends 어플라이언스와 날짜 범위를 조정하여 백업을 검색합니다.</p></li>
+<li><p>열 필드에 텍스트를 입력하여 디스플레이를 필터링합니다.</p></li>
+<li><p>열 필드의 화살표를 클릭하여 열별로 정렬합니다.
+<img alt="screenshot-19" src="../_images/screenshot-19.png" /></p></li>
+</ul>
+</li>
+</ul>
+<p>(2) 전체 복구 선택:<br></p>
+<ul class="simple">
+<li><p>Recover:</p>
+<ul>
+<li><p>표시된 백업본 중에서 원하는 복구 시점을 선택한 후 위 <b>Recover</b> 버튼을 클릭합니다.</p></li>
+</ul>
+</li>
+</ul>
+<p>(3) 복구 옵션 선택:<br></p>
+<ul class="simple">
+<li><p>RECOVERY OPTIONS:</p>
+<ul>
+<li><p><b>복구할 대상(Asset)</b>과 <b>경로(Directory)</b>를 선택합니다.</p></li>
+</ul>
+</li>
+<li><p>ADVANCED OPTIONS:</p>
+<ul>
+<li><p>백업 실행 전, 후에 스크립트를 실행하게 할 수 있습니다.</p></li>
+<li><p>defualt로 선택되어 있는 옵션은 권장사항이므로 변경하지 않는 것이 좋습니다.</p></li>
+<li><p>Restore newer files only : 복구할 파일과 동일한 파일이 있는 경우 새로운 파일만 복구하는 옵션이므로, Overwriteㅇ 옵션과 반대입니다.</p></li>
+<li><p>Set file dates to today : 파일을 오늘 날짜로 변경하여 복구합니다.
+<img alt="screenshot-20" src="../_images/screenshot-20.png" /></p></li>
+</ul>
+</li>
+</ul>
+<p>(4) 복구 시작:<br></p>
+<ul class="simple">
+<li><p><b>Next</b>를 클릭하여 설정한 복구 항목을 확인합니다.</p></li>
+<li><p><b>Save</b>를 클릭하여 복구를 시작합니다.</p></li>
+</ul>
+<p>(6) 복구 확인:<br></p>
+<ul class="simple">
+<li><p>실시간 복구 현황은 <b>Jobs → Active Jobs</b>에서 확인할 수 있습니다.</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2><span style="background-color: #dcffe4;">개별 파일 복구</span><a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>(1) 백업본 선택:<br></p>
+<ul class="simple">
+<li><p><b>Backup Catalog</b> 또는 <b>Backup Browser</b>에서 선택할 수 있습니다.
+(2) Backup Catalog:</p></li>
+<li><p>백업 카탈로그에서는 백업본이 아래에 표시됩니다.</p></li>
+<li><p>우측 <b>FILTER BACKUPS</b>에서 날짜 및 표시 형식을 지정할 수 있습니다.</p></li>
+<li><p>표시되는 대상을 확장하면 해당 시스템의 백업본을 확인할 수 있습니다.
+<img alt="screenshot-18" src="../_images/screenshot-18.png" /></p></li>
+</ul>
+<p>(3) Backup Browser:</p>
+<ul class="simple">
+<li><p>백업 브라우저는 고급 검색 및 필터 옵션을 제공합니다.</p></li>
+<li><p>Unitrends 어플라이언스와 날짜 범위를 조정하여 백업을 검색합니다.</p></li>
+<li><p>열 필드에 텍스트를 입력하여 디스플레이를 필터링합니다.</p></li>
+<li><p>열 필드의 화살표를 클릭하여 열별로 정렬합니다.
+<img alt="screenshot-19" src="../_images/screenshot-19.png" /></p></li>
 </ul>
 </section>
 </section>
@@ -370,20 +444,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="%EC%86%8C%EC%82%B0%20%EB%8C%80%EC%83%81%28Backup%20Copy%20Target%29.html"
+       href="../%EB%B0%B1%EC%97%85/%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98%20%EB%B0%B1%EC%97%85%28Application%20Backup%29.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">이전</p>
-        <p class="prev-next-title">소산 대상(Backup Copy Target)</p>
+        <p class="prev-next-title">애플리케이션 백업(Application Backup)</p>
       </div>
     </a>
     <a class="right-next"
-       href="../%EA%B8%B0%EB%B3%B8%20%EC%84%A4%EC%A0%95/%EC%A0%95%EC%B1%85%20%EA%B4%80%EB%A6%AC.html"
+       href="%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EB%B0%B1%EC%97%85%EC%9D%98%20%EB%B3%B5%EA%B5%AC.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">다음</p>
-        <p class="prev-next-title">상세 스케줄 설정 방법</p>
+        <p class="prev-next-title">이미지 백업의 복구 절차</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -404,7 +478,9 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#span-style-background-color-dcffe4-span"><span style="background-color: #dcffe4;">모든 대상 시스템 확인</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#span-style-background-color-dcffe4-recovery-point-span"><span style="background-color: #dcffe4;">복구 지점(Recovery Point)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#span-style-background-color-dcffe4-span"><span style="background-color: #dcffe4;">전체 복구</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><span style="background-color: #dcffe4;">개별 파일 복구</span></a></li>
 </ul>
   </nav></div>
 

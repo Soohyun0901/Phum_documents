@@ -14,8 +14,12 @@
 * 열 이름 옆에 있는 화살표를 클릭하면 값을 오름차순이나 내림차순으로 정렬할 수 있습니다.
 * 입력한 문자열이 포함된 행만 표시하려면 열의 필터 필드에 텍스트를 입력하세요.
 * 열 설명:<br>
-| 열 | 설명 |
-|:-----------:|:------------:|
-| 내용1 | 내용2 | 
-| 내용4 | 내용5 | 
-
+    * Name: 
+    * Address: 
+    * Description: 
+    * Pairing:
+    * Credentials: 
+    * Retention: 
+    * Encrypted: 
+    * Agent Version: 
+    * Appliance: 

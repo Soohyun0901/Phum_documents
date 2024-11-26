@@ -7,7 +7,7 @@ Windows 이미지 백업은 블록 가속화(block acceleration) 기술을 사�
 Azure와 Amazon Web Services(AWS) 환경에서는 이미지 백업이 지원되지 않습니다.<br>대신 에이전트 기반의 파일 백업 및 애플리케이션 백업을 사용하세요.<br>
 <br>
 
-###### <span style="background-color: #f1f8ff;">Windows 이미지 백업을 위한 모범 사례 및 고려 사항</span>
+###### <span style="background-color: #dcffe4;">Windows 이미지 백업을 위한 모범 사례 및 고려 사항</span>
  * Microsoft의 권장 사항을 준수하세요.<br>
  * 이미지 백업은 전체(Full) 백업과 증분(Incremental) 백업을 지원합니다.<br>
  * 디스크 또는 볼륨 구성에 변경 사항이 있는 경우 새 전체(Full) 백업이 필요합니다. 이는 디스크의 개수, 크기, 속성 또는 볼륨의 개수, 크기, 속성에 변경이 있을 때를 포함합니다.<br><br>
@@ -19,7 +19,7 @@ Azure와 Amazon Web Services(AWS) 환경에서는 이미지 백업이 지원되�
 > * 하나의 대상을 여러 유니트렌드로 백업하지 마세요.<br>
 > 단일 이미지 백업 대상을 여러 유니트렌드에서 백업하는 것은 권장되지 않습니다. 한 유니트렌드에서 백업을 실행할 때마다 다른 유니트렌드에서의 증분(Incremental) 백업 체인의 무결성이 손상됩니다. 손상된 백업 체인을 복구하기 위해, 유니트렌드는 다음 증분 백업을 자동으로 전체(Full) 백업으로 전환합니다. 이로 인해 여러 기기에서 증분 백업을 실행하면 많은 전체 백업이 생성될 가능성이 높습니다.<br>
 
-###### <span style="background-color: #f1f8ff;">Windows 이미지 백업 요구사항</span>
+###### <span style="background-color: #dcffe4;">Windows 이미지 백업 요구사항</span>
 Windows 대상에 대한 이미지 백업을 위해 다음 요구사항을 충족해야 합니다:
 ###### ▪ 항목별 요구사항
 ① 유니트렌드 어플라이언스<br>
@@ -101,7 +101,7 @@ Windows Server 2008 R2 SP1에 대해 추가 요구사항이 적용됩니다.<br>
 * Windows Server 장애 조치 클러스터(WSFCs)<br>
 * 분산 파일시스템(DFS) 환경<br><br>
 
-###### <span style="background-color: #f1f8ff;">이미지 백업 정책 설정 단계</span>
+###### <span style="background-color: #dcffe4;">이미지 백업 정책 설정 단계</span>
 
 (1) <b>Jobs → +Create Job</b> 버튼을 클릭하여 <b>Backup</b>을 선택합니다.<br><br>
 ![screenshot-1](../img/screenshot-1.png)
