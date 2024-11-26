@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>이미지 백업의 복구 절차 &#8212; doc 1.0.0 문서</title>
+    <title>즉각 복구(Instant Recovery) &#8212; doc 1.0.0 문서</title>
   
   
   
@@ -44,12 +44,12 @@
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../_static/translations.js?v=afa94a99"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '복구/이미지 백업의 복구';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '복구/즉각 복구(Instant Recovery)';</script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="색인" href="../genindex.html" />
     <link rel="search" title="검색" href="../search.html" />
-    <link rel="next" title="즉각 복구(Instant Recovery)" href="%EC%A6%89%EA%B0%81%20%EB%B3%B5%EA%B5%AC%28Instant%20Recovery%29.html" />
-    <link rel="prev" title="파일 백업의 복구 절차" href="%ED%8C%8C%EC%9D%BC%20%EB%B0%B1%EC%97%85%EC%9D%98%20%EB%B3%B5%EA%B5%AC.html" />
+    <link rel="next" title="Replica" href="%EB%B0%B1%EC%97%85%20%EB%B3%B5%EC%A0%9C%EB%B3%B8%28Replica%29.html" />
+    <link rel="prev" title="이미지 백업의 복구 절차" href="%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EB%B0%B1%EC%97%85%EC%9D%98%20%EB%B3%B5%EA%B5%AC.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ko"/>
   <meta name="docsearch:version" content="" />
@@ -173,8 +173,8 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">복구:</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="%ED%8C%8C%EC%9D%BC%20%EB%B0%B1%EC%97%85%EC%9D%98%20%EB%B3%B5%EA%B5%AC.html">파일 백업의 복구 절차</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">이미지 백업의 복구 절차</a></li>
-<li class="toctree-l1"><a class="reference internal" href="%EC%A6%89%EA%B0%81%20%EB%B3%B5%EA%B5%AC%28Instant%20Recovery%29.html">즉각 복구(Instant Recovery)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EB%B0%B1%EC%97%85%EC%9D%98%20%EB%B3%B5%EA%B5%AC.html">이미지 백업의 복구 절차</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">즉각 복구(Instant Recovery)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%EB%B0%B1%EC%97%85%20%EB%B3%B5%EC%A0%9C%EB%B3%B8%28Replica%29.html">Replica</a></li>
 </ul>
 
@@ -230,7 +230,7 @@
       
       
       
-      <li><a href="../_sources/복구/이미지 백업의 복구.md" target="_blank"
+      <li><a href="../_sources/복구/즉각 복구(Instant Recovery).md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="소스 파일 다운로드"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -293,9 +293,7 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="검색" aria-label="검색" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -306,21 +304,11 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>이미지 백업의 복구 절차</h1>
+    <h1>즉각 복구(Instant Recovery)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> 내용 </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#span-style-background-color-dcffe4-span"><span style="background-color: #dcffe4;">전체 복구</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><span style="background-color: #dcffe4;">선택 파일 복구</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><span style="background-color: #dcffe4;">복구 개체 제거</span></a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -330,147 +318,8 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="id1">
-<h1>이미지 백업의 복구 절차<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
-<p>Unitrends는 Windows 시스템의 이미지 백업을 복구하기 위한 다양한 방법을 제공합니다.<br>
-전체 복구를 하거나, 백업본에서 선택한 파일만 복구할 수 있습니다.<br>
-중요 시스템의 빠른 복구를 위해 [이미지 복제본(Replicas)]을 생성하거나 [즉각복구(Instant Recovery)] 기능을 사용할 수 있습니다.<br><br></p>
-<p>그럼 Windows 이미지 백업을 활용한 다양한 복구 기능의 절차를 확인해보도록 하겠습니다.<br></p>
-<section id="span-style-background-color-dcffe4-span">
-<h2><span style="background-color: #dcffe4;">전체 복구</span><a class="headerlink" href="#span-style-background-color-dcffe4-span" title="Link to this heading">#</a></h2>
-<p>(1) 백업본 선택:<br>
-<b>Backup Catalog</b> 또는 <b>Backup Browser</b>에서 선택할 수 있습니다.</p>
-<ul class="simple">
-<li><p>Backup Catalog:</p>
-<ul>
-<li><p>백업 카탈로그에서는 백업본이 아래에 표시됩니다.</p></li>
-<li><p>우측 <b>FILTER BACKUPS</b>에서 날짜 및 표시 형식을 지정할 수 있습니다.</p></li>
-<li><p>표시되는 대상을 확장하면 해당 시스템의 백업본을 확인할 수 있습니다.
-<img alt="screenshot-18" src="../_images/screenshot-18.png" /></p></li>
-</ul>
-</li>
-<li><p>Backup Browser:</p>
-<ul>
-<li><p>백업 브라우저는 고급 검색 및 필터 옵션을 제공합니다.</p></li>
-<li><p>Unitrends 어플라이언스와 날짜 범위를 조정하여 백업을 검색합니다.</p></li>
-<li><p>열 필드에 텍스트를 입력하여 디스플레이를 필터링합니다.</p></li>
-<li><p>열 필드의 화살표를 클릭하여 열별로 정렬합니다.
-<img alt="screenshot-19" src="../_images/screenshot-19.png" /></p></li>
-</ul>
-</li>
-</ul>
-<p>(2) 전체 복구 선택:<br></p>
-<ul class="simple">
-<li><p>Recover:</p>
-<ul>
-<li><p>표시된 백업본 중에서 원하는 복구 시점을 선택한 후 위 <b>Recover</b> 버튼을 클릭합니다.</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="id2">
-<h2><span style="background-color: #dcffe4;">선택 파일 복구</span><a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
-<p>다음 절차를 사용하여 Windows 이미지 백업에서 파일로 복구합니다.<br></p>
-<p>(1) 백업본 선택:<br></p>
-<ul class="simple">
-<li><p>Recover → Backup Catalog 탭을 클릭합니다.</p></li>
-<li><p>오른쪽에 있는 FILTER BACKUPS를 사용하여 디스플레이에 표시되는 백업을 커스텀합니다.</p></li>
-<li><p>Windows 시스템을 확장하고 파일 복구할 이미지 백업을 선택합니다.</p></li>
-</ul>
-<p>(2) 복구 개체 생성:<br></p>
-<blockquote>
-<div><p>※ 참고:<br></p>
-<ul class="simple">
-<li><p>한 Windows 시스템에 대해 여러 복구 개체가 생성될 수 없습니다.</p></li>
-<li><p>따라서 기존 복구 개체가 존재하는 경우, 새 복구 개체를 만들기 전에 기존 복구 개체를 제거해야 합니다.</p></li>
-</ul>
-</div></blockquote>
-<ul class="simple">
-<li><p>Recovery Files 버튼을 클릭하고, Confirm 버튼을 클릭하여 복구 개체를 생성합니다.</p></li>
-</ul>
-<p>(3) 복구 개체 확인:<br></p>
-<ul class="simple">
-<li><p>View FLR 버튼을 클릭하여 생성된 복구 개체를 확인합니다.</p></li>
-</ul>
-<p>(4) 파일 복구 실행: <br>
-Recover → File Level Recovery 탭을 통해 다양한 파일 복구를 진행할 수 있습니다.<br>
-복구 개체는 Windows 시스템 이름, 복구 개체의 상태, 복구 개체가 생성된 날짜 및 시간과 개체 유지시간, iSCSI 또는 CIFS를 통해 액세스할 수 있는지의 여부가 함께 표시됩니다.</p>
-<ul class="simple">
-<li><p>.zip 파일로 다운로드:</p>
-<ul>
-<li><p>복구 개체를 선택하고 <b>Browse/Downloads</b>버튼을 클릭합니다.</p></li>
-<li><p>파일 및 폴더를 선택하고 Downloads 버튼을 클릭하여 .zip 파일로 다운로드합니다.</p></li>
-<li><p>.zip 파일은 브라우저의 기본 위치로 다운로드됩니다.</p></li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<div><p>※ 참고:<br></p>
-<ul class="simple">
-<li><p>복구 중에 볼륨에 문자가 할당되면 해당 문자가 원본 디스크의 문자와 일치하지 않을 수 있습니다.</p></li>
-<li><p>다운로드 시간은 파일 크기, 대역폭, 다운로드 속도 등 다양한 요인에 따라 영향을 받습니다.<br></p></li>
-</ul>
-</div></blockquote>
-<ul class="simple">
-<li><p>CIFS 공유로 마운트:</p>
-<ul>
-<li><p>복구 개체를 선택하고 <b>Show Details</b>버튼을 클릭합니다.</p></li>
-<li><p>File Level Recovery Details 창에 표시되는 CIFS Path를 기록해두세요. 대상 시스템에서 CIFS를 마운트하려면 이 경로가 필요합니다.</p></li>
-<li><p>파일 브라우저에 CIFS 경로를 입력합니다.</p></li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<div><p>※ 참고:<br></p>
-<ul class="simple">
-<li><p>복구 중에 볼륨에 문자가 할당되면 해당 문자가 원본 디스크의 문자와 일치하지 않을 수 있습니다.</p></li>
-<li><p>Windows 파일 탐색기에는 보호/시스템 파일을 숨기는 설정이 포함되어 있습니다. 모든 파일에 액세스하려면 이 설정을 끄십시오.<br></p></li>
-</ul>
-</div></blockquote>
-<ul class="simple">
-<li><p>복구할 파일 및 폴더를 선택하여 로컬 컴퓨터의 다른 위치로 공유합니다.</p></li>
-<li><p>iSCSI LUN으로 복구:</p>
-<ul>
-<li><p>복구 대상 시스템에 로그인합니다.</p></li>
-<li><p>제어판의 관리 도구에서 iSCSI 초기자를 시작합니다.</p></li>
-<li><p>Tartet에 Unitrends 어플라이언스 IP를 입력하고 Quick Connect..를 클릭합니다.</p></li>
-<li><p>검색된 Tartet 필드에는 iSCSI LUN 대상 목록이 채워지며, 목록에서 iSCSI 대상을 선택합니다.</p></li>
-<li><p>Disk Manager 또는 diskpart를 사용하여 마운트된 iSCSI 디스크가 온라인인지 확인합니다. 그렇지 않은 경우 드라이브를 온라인으로 전환합니다.</p></li>
-<li><p>iSCSI Initiator로 돌아갑니다. Volumes and Devices 탭에서Auto Configure를iSCSI 대상에서 로컬 머신으로 드라이브를 매핑합니다(또는 원하는 경우 수동으로 매핑).</p></li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<div><p>※ 참고:<br></p>
-<ul class="simple">
-<li><p>복구 중에 볼륨에 문자가 할당되면 해당 문자가 원본 디스크의 문자와 일치하지 않을 수 있습니다.
-* 매핑된 드라이브 아래에 있는 파일에 액세스하여 로컬 컴퓨터의 다른 위치로 이동합니다.
-※ 참고:<br></p></li>
-<li><p>Windows 파일 탐색기에는 보호/시스템 파일을 숨기는 설정이 포함되어 있습니다. 모든 파일에 액세스하려면 이 설정을 끄십시오.<br></p></li>
-</ul>
-</div></blockquote>
-</section>
-<section id="id3">
-<h2><span style="background-color: #dcffe4;">복구 개체 제거</span><a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
-<p>최적의 성능을 보장하려면 Unitrends 어플라이언스에서 복구 개체를 제거하세요.</p>
-<blockquote>
-<div><p>※ 경고!:<br></p>
-<ul class="simple">
-<li><p>CIFS 또는 iSCSI LUN을 마운트한 경우 복구 개체를 제거하기 전에 Windows 대상 시스템에서 마운트를 해제해야 합니다.<br></p></li>
-<li><p>Windows 대상 시스템이 아직 연결된 상태에서 복구 개체를 제거하면 원치 않는 결과와 오류가 발생합니다.</p></li>
-</ul>
-</div></blockquote>
-<p>(1) 제거할 복구 개체 선택:</p>
-<ul class="simple">
-<li><p>Recover → File Level Recovery 탭을 클릭합니다.</p></li>
-<li><p>제거할 복구 개체를 선택합니다.</p></li>
-</ul>
-<p>(2) 복구 개체 제거:</p>
-<ul class="simple">
-<li><p>Remove 버튼을 클릭하여 제거를 진행합니다.</p></li>
-<li><p>개체가 제거되고 더 이상 파일 복구 개체 탭에 표시되지 않습니다.</p></li>
-</ul>
-</section>
+  <section id="instant-recovery">
+<h1>즉각 복구(Instant Recovery)<a class="headerlink" href="#instant-recovery" title="Link to this heading">#</a></h1>
 </section>
 
 
@@ -485,20 +334,20 @@ Recover → File Level Recovery 탭을 통해 다양한 파일 복구를 진행�
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="%ED%8C%8C%EC%9D%BC%20%EB%B0%B1%EC%97%85%EC%9D%98%20%EB%B3%B5%EA%B5%AC.html"
+       href="%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EB%B0%B1%EC%97%85%EC%9D%98%20%EB%B3%B5%EA%B5%AC.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">이전</p>
-        <p class="prev-next-title">파일 백업의 복구 절차</p>
+        <p class="prev-next-title">이미지 백업의 복구 절차</p>
       </div>
     </a>
     <a class="right-next"
-       href="%EC%A6%89%EA%B0%81%20%EB%B3%B5%EA%B5%AC%28Instant%20Recovery%29.html"
+       href="%EB%B0%B1%EC%97%85%20%EB%B3%B5%EC%A0%9C%EB%B3%B8%28Replica%29.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">다음</p>
-        <p class="prev-next-title">즉각 복구(Instant Recovery)</p>
+        <p class="prev-next-title">Replica</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -508,24 +357,6 @@ Recover → File Level Recovery 탭을 통해 다양한 파일 복구를 진행�
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> 내용
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#span-style-background-color-dcffe4-span"><span style="background-color: #dcffe4;">전체 복구</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><span style="background-color: #dcffe4;">선택 파일 복구</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><span style="background-color: #dcffe4;">복구 개체 제거</span></a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

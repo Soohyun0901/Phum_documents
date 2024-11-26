@@ -54,6 +54,8 @@
 
    복구/파일 백업의 복구.md
    복구/이미지 백업의 복구.md
+   복구/즉각 복구(Instant Recovery)
+   복구/백업 복제본(Replica)
 
 Indices and tables
 ==================
