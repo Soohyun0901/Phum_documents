@@ -32,6 +32,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=111a6a59" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
@@ -172,8 +173,10 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">복구:</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%ED%8C%8C%EC%9D%BC%20%EB%B0%B1%EC%97%85%EB%B3%B8%20%EB%B3%B5%EA%B5%AC.html">전체 복구</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EB%B0%B1%EC%97%85%EB%B3%B8%20%EB%B3%B5%EA%B5%AC.html">파일단위 복구</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%ED%8C%8C%EC%9D%BC%20%EB%B0%B1%EC%97%85%EC%9D%98%20%EB%B3%B5%EA%B5%AC.html">파일 백업의 복구 절차</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EB%B0%B1%EC%97%85%EC%9D%98%20%EB%B3%B5%EA%B5%AC.html">이미지 백업의 복구 절차</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%EC%A6%89%EA%B0%81%20%EB%B3%B5%EA%B5%AC%28Instant%20Recovery%29.html">즉각 복구(Instant Recovery)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%EB%B0%B1%EC%97%85%20%EB%B3%B5%EC%A0%9C%EB%B3%B8%28Replica%29.html">Replica</a></li>
 </ul>
 
     </div>
@@ -314,7 +317,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#span-style-background-color-dcffe4-linux-span"><span style="background-color: #dcffe4;">Linux 에이전트 제거 방법</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1. Linux 에이전트 제거 방법</a></li>
 </ul>
             </nav>
         </div>
@@ -329,36 +332,36 @@
   <section id="linux">
 <h1>Linux 에이전트 제거<a class="headerlink" href="#linux" title="Link to this heading">#</a></h1>
 <p>Linux 에이전트를 안전하게 제거하려면 아래의 절차를 따르세요.</p>
-<section id="span-style-background-color-dcffe4-linux-span">
-<h2><span style="background-color: #dcffe4;">Linux 에이전트 제거 방법</span><a class="headerlink" href="#span-style-background-color-dcffe4-linux-span" title="Link to this heading">#</a></h2>
-<p>(1) 터미널 열기:<br></p>
+<section id="id1">
+<h2>1. Linux 에이전트 제거 방법<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p><b>(1) 터미널 열기:</b><br></p>
 <ul class="simple">
 <li><p>터미널을 열고 root 사용자로 로그인합니다.</p></li>
 </ul>
-<p>(2) 에이전트 설치 디렉토리로 이동:<br></p>
+<p><b>(2) 에이전트 설치 디렉토리로 이동:</b><br></p>
 <ul class="simple">
 <li><p>기본 설치 위치는 <code class="docutils literal notranslate"><span class="pre">/usr/bp</span></code>입니다.</p></li>
 <li><p>에이전트가 설치된 디렉토리로 이동합니다.</p></li>
 </ul>
-<p>(3) 제거 명령 실행<br></p>
+<p><b>(3) 제거 명령 실행</b><br></p>
 <ul class="simple">
 <li><p>아래 명령어를 실행하여 에이전트를 제거합니다.<br>
 <code class="docutils literal notranslate"><span class="pre">./uninstall</span></code></p></li>
 </ul>
-<p>(4) 제거 확인<br></p>
+<p><b>(4) 제거 확인</b><br></p>
 <ul class="simple">
 <li><p>명령어 실행 후 에이전트 관련 파일과 설정이 제거됩니다.</p></li>
 <li><p>아래 명령어를 실행하여 출력값이 없다면 에이전트가 정상 제거된 것입니다.<br>
 <code class="docutils literal notranslate"><span class="pre">ps</span> <span class="pre">-ef</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">bp</span></code></p></li>
 </ul>
 <blockquote>
-<div><p>※ 참고사항</p>
+<div><p><b>※ 참고사항</b></p>
 <ul class="simple">
 <li><p>에이전트 설치 디렉토리가 기본 디렉토리가 아닌 경우, 해당 디렉토리에서 <code class="docutils literal notranslate"><span class="pre">./uninstall</span></code>명령을 실행해야 합니다.</p></li>
-<li><p>제거 후에도 시스템에 남아있는 관련 설정이나 로그 파일이 있을 수 있으니, 필요에 따라 수동으로 삭제하세요.
-<br><br><br></p></li>
+<li><p>제거 후에도 시스템에 남아있는 관련 설정이나 로그 파일이 있을 수 있으니, 필요에 따라 수동으로 삭제하세요.</p></li>
 </ul>
 </div></blockquote>
+<p><br><br><br></p>
 </section>
 </section>
 
@@ -408,7 +411,7 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#span-style-background-color-dcffe4-linux-span"><span style="background-color: #dcffe4;">Linux 에이전트 제거 방법</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1. Linux 에이전트 제거 방법</a></li>
 </ul>
   </nav></div>
 

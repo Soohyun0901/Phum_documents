@@ -38,3 +38,8 @@ extensions = ['recommonmark']
 
 html_favicon='favicon.ico'
 #html_extra_path = ['source/img']
+
+html_static_path = ['_static']  # _static 폴더 경로 추가
+html_css_files = [
+    'custom.css',  # custom.css 파일 등록
+]

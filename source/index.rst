@@ -10,7 +10,7 @@
 
 .. toctree::
    :maxdepth: 1
-   :caption: 구성:
+   :caption: • 구성:
 
    구성/어플라이언스 설정.md
    구성/백업 저장소.md
@@ -20,7 +20,7 @@
 
 .. toctree::
    :maxdepth: 1
-   :caption: 기본 설정:
+   :caption: • 기본 설정:
 
    기본 설정/정책 관리.md
    기본 설정/백업 대상 등록.md
@@ -29,7 +29,7 @@
 
 .. toctree::
    :maxdepth: 1
-   :caption: 에이전트 관리:
+   :caption: • 에이전트 관리:
 
    에이전트 관리/Linux 에이전트 설치.md
    에이전트 관리/Linux 에이전트 제거.md
@@ -40,7 +40,7 @@
 
 .. toctree::
    :maxdepth: 1
-   :caption: 백업:
+   :caption: • 백업:
 
    백업/파일 백업(File-Level Backup).md
    백업/이미지 백업(Image-Level Backup).md
@@ -50,7 +50,7 @@
 
 .. toctree::
    :maxdepth: 1
-   :caption: 복구:
+   :caption: • 복구:
 
    복구/파일 백업의 복구.md
    복구/이미지 백업의 복구.md
