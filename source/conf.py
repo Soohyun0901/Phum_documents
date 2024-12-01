@@ -22,18 +22,21 @@ extensions = []
 language = 'ko'
 
 # -- Options for HTML output -------------------------------------------------
+extensions = ['myst_parser']  # Markdown 지원
+source_suffix = {'.rst': 'restructuredtext', '.md': 'markdown'}  # Markdown 파일 확장자 설정
 
 
 html_theme = 'sphinx_book_theme'
+#html_theme = 'alabaster'  # 기본 제공 테마로 변경
 
 
 # 다음코드 추가
-from recommonmark.parser import CommonMarkParser
+#from recommonmark.parser import CommonMarkParser
 
-source_parsers = {
-    '.md': CommonMarkParser,
-}
-extensions = ['recommonmark']
+#source_parsers = {
+#    '.md': CommonMarkParser,
+#}
+#extensions = ['recommonmark']
 
 
 html_favicon='favicon.ico'
@@ -43,3 +46,6 @@ html_static_path = ['_static']  # _static 폴더 경로 추가
 html_css_files = [
     'custom.css',  # custom.css 파일 등록
 ]
+
+html_style = None  # 테마의 기본 CSS 비활성화
+

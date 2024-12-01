@@ -1,4 +1,4 @@
-### Linux 에이전트 설치
+## Linux 에이전트 설치
 
 Unitrends는 CentOS, Debian, Red Hat, SUSE, Ubuntu를 포함한 대부분의 Linux 배포판을 지원합니다.<br> Unitrends 어플라이언스에 Linux 자산을 추가하려면 먼저 에이전트를 설치해야 합니다.<br>
 

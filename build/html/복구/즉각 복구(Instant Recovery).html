@@ -32,7 +32,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=111a6a59" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d0b51438" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
@@ -398,9 +398,9 @@ IR VM은 ESXi 서버 또는 Hyper-V 서버에 상주할 수 있습니다.<br>
 <li><p>단일 ESXi 서버를 사용하면 검증(Audit) 모드는 수행할 수 있지만 즉각 복구(Instant Recovery) 모드는 지원되지 않습니다.</p></li>
 </ul>
 </div></blockquote>
-<ul>
-<li><p>ESXi 서버</p>
 <ul class="simple">
+<li><p>ESXi 서버</p>
+<ul>
 <li><p>ESXi 버전 5이상을 실행해야 합니다.</p></li>
 <li><p>IR을 수행하는 Unitrends 어플라이언스의 대상으로 등록되어야 합니다.</p></li>
 <li><p>Windows 이미지 백업에 대한 즉각 복구의 경우, 복구하는 Windows 대상의 운영체제를 지원해야 합니다.</p></li>
@@ -409,25 +409,26 @@ IR VM은 ESXi 서버 또는 Hyper-V 서버에 상주할 수 있습니다.<br>
 </li>
 <li><p>IR VM 리소스
 IR VM은 원본 대상을 기준으로 리소스가 할당됩니다.<br></p>
-<ul class="simple">
+<ul>
 <li><p>원본 대상에 6개 이상의 CPU가 있는 경우, IR VM에 4개의 CPU가 할당됩니다.</p></li>
 <li><p>원본 대상에 2개 이상의 CPU가 있는 경우, IR VM에 2개의 CPU가 할당됩니다.</p></li>
-<li><p>원본 대상에 2개 미만의 CPU가 있는 경우, IR VM에 1개의 CPU가 할당됩니다.</p></li>
+<li><p>원본 대상에 2개 미만의 CPU가 있는 경우, IR VM에 1개의 CPU가 할당됩니다.
+<br></p></li>
+<li><p>원본 대상에 8GB 이상의 RAM이 있는 경우 IR VM에 8GB가 할당됩니다.</p></li>
+<li><p>원본 대상에 4GB 이상의 RAM이 있는 경우 IR VM에 4GB가 할당됩니다.</p></li>
+<li><p>원본 대상에 2GB 이상의 RAM이 있는 경우 IR VM에 2GB가 할당됩니다.</p></li>
+<li><p>원본 대상에 2GB 미만의 RAM이 있는 경우 IR VM에 1GB가 할당됩니다.</p></li>
 </ul>
-  <br>
-   * 원본 대상에 8GB 이상의 RAM이 있는 경우 IR VM에 8GB가 할당됩니다.
-   * 원본 대상에 4GB 이상의 RAM이 있는 경우 IR VM에 4GB가 할당됩니다.
-   * 원본 대상에 2GB 이상의 RAM이 있는 경우 IR VM에 2GB가 할당됩니다.
-   * 원본 대상에 2GB 미만의 RAM이 있는 경우 IR VM에 1GB가 할당됩니다.</li>
+</li>
 <li><p>IR VM 변경성</p></li>
 <li><p>검증(Audit) 모드에서:<br></p>
-<ul class="simple">
+<ul>
 <li><p>IR VM은 네트워크 연결이 없습니다.</p></li>
 <li><p>검증(Audit) 모드에서 변경한 내용은 Unitrends 백업에 적용되지 않으며, IR 세션을 종료하면 손실됩니다.</p></li>
 </ul>
 </li>
 <li><p>즉각 복구(Instant Recovery) 모드에서:<br></p>
-<ul class="simple">
+<ul>
 <li><p>IR VM의 변경사항은 Unitrends 어플라이언스에서 수행되는 원본 대상 백업에 의해 적용되며, IR 세션을 종료한 후에도 유지됩니다.</p></li>
 </ul>
 </li>
