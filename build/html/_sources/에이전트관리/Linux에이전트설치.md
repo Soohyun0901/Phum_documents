@@ -1,10 +1,10 @@
-## Linux 에이전트 설치
+# Linux 에이전트 설치
 
 Unitrends는 CentOS, Debian, Red Hat, SUSE, Ubuntu를 포함한 대부분의 Linux 배포판을 지원합니다.<br> Unitrends 어플라이언스에 Linux 자산을 추가하려면 먼저 에이전트를 설치해야 합니다.<br>
 
 <br>
 
-#### 1. 보안 페어링 요구사항
+## 1. 보안 페어링 요구사항
 Linux 에이전트 10.7.5버전부터, Unitrends 어플라이언스와 백업 대상 시스템의 Linux 에이전트 간 보안 페어링이 자동으로 설정됩니다.<br>
 이 페어링은 Transport Layer Security(TLS)를 통해 데이터를 암호화하고, 어플라이언스와 에이전트 간의 연결을 인증합니다. 페어링된 인증서가 없으면 어플라이언스와 에이전트 간 통신은 차단됩니다.<br>
 이 기능은 승인되지 않은 어플라이언스(예: 악성 코드 또는 허가되지 않은 백업 시도)가 에이전트와 통신하는 것을 방지하여 보안을 강화합니다.<br><br>
@@ -44,7 +44,7 @@ Linux 대상 시스템에서 888/TCP 포트가 접근 가능해야 합니다.
 
 <br>
 
-#### 2. Linux 에이전트 설치 단계
+## 2. Linux 에이전트 설치 단계
 <b>(1) 설치 프로그램 다운로드</b><br>
 
 * Unitrends 다운로드 페이지에서 <b>Latest Agent Releases</b> 섹션의 <b>CNT install script</b>를 클릭하여 설치 프로그램을 다운로드하세요.
@@ -77,7 +77,7 @@ c. ```<Unitrends 어플라이언스의 호스트네임> → Enter``` : 정확한
 d. ```y → Enter``` : Unitrends 어플라이언스에서 1745/TCP를 데이터 포트로 사용하도록 지정합니다.<br>
 ![screenshot-17](../img/screenshot-17.png)
 
-#### 3. 설치 후 확인사항
+## 3. 설치 후 확인사항
 <b>(1) 설치 위치</b><br>
 
 * 에이전트 기본 설치 위치와 데몬 위치는 아래와 같습니다.

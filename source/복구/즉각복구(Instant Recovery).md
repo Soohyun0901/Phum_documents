@@ -30,7 +30,7 @@
 ## 3. 타겟 대상별 요구사항
 
 IR은 선택한 백업본을 기반으로 VM을 생성합니다.<br>
-IR VM은 ESXi 서버 또는 Hyper-V 서버에 상주할 수 있습니다.<br>
+IR VM은 ESXi 서버 또는 Hyper-V 서버에 상주할 수 있습니다.<br><br>
 <b>① VMware ESXi 호스트</b>
 * vCenter 버전 및 라이선스
     * Storage vMotion을 지원하는 라이선스가 있어야 합니다.
@@ -122,4 +122,4 @@ VM 이름을 변경하려면 연필 아이콘을 클릭합니다.<br>
 
 
 
-#### 5. 즉각 복구 단계(VMware 백업)
+## 5. 즉각 복구 단계(VMware 백업)
