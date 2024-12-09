@@ -21,11 +21,19 @@
 * Unitrends는 초기 배포 직후, 대상 시스템 장애가 발생하기 전에 즉각 복구를 위한 공간을 확보할 것을 강력히 권장합니다.
 * 나중에 공간을 할당할 수도 있지만, 이 경우 어플라이언스가 백업본을 제거하여 공간을 확보해야 할 수 있습니다.
 
+
 > 스토리지 할당이 필요한 이유
 > * IR 복구된 시스템의 디스크는 스토리지 마이그레이션이 완료될 때까지 Unitrends 어플라이언스에 존재합니다.
 > * IR 복구할 시스템 원본 크기의 최소 <b>20%</b>를 즉각 복구 스토리지로 할당하십시오.
 > * 장기적인 복구 작업에서는 데이터 증가를 대비하여 추가 공간을 확보해야 합니다.
 > * 즉각 복구를 위해 할당된 스토리지는 Windows 복제(Replica) 기능에서도 사용할 수 있습니다.
+
+### 2-1. IR 스토리지 할당 방법
+(1) <b>Configure → Appliances</b>탭에서 <b>Storage</b>를 선택하고 <b>Edit</b> 버튼을 클릭합니다.<br>
+(2) <b>Instant Recovery</b>의 비율을 수정하고 <b>Save</b>를 클릭합니다.<br>
+
+![screenshot-33](../img/screenshot-33.png)
+
 
 ## 3. 타겟 대상별 요구사항
 
@@ -118,8 +126,71 @@ VM 이름을 변경하려면 연필 아이콘을 클릭합니다.<br>
 
 > <b>※ 참고:</b>
 > 종속된 증분 백업이 많을수록 IR VM을 만드는 데 시간이 더 걸릴 수 있습니다.
-* 
 
+### 4-2. IR - 즉각복구(Instant Recovery)모드 수행 단계
+> ※ 권장사항:
+> * 즉각복구 모드는 일시적으로 사용해야 합니다.
+> * Unitrends 어플라이언스는 Live IR VM이 14일동안 실행된 경우 경고를 보내기 시작합니다.
+> * 장애가 발생한 서버를 새 하드웨어로 복구한 후 IR  세션을 종료하거나, IR VM을 영구적으로 대체 용도로 사용할 수 있습니다.
+> * Live IR VM은 하이퍼바이저 리소스를 사용합니다.<br> VM 데이터가 하이퍼바이저로 마이그레이션되는 즉시 IR 세션을 종료합니다.<br> 이렇게 하면 IR 세션만 제거되며, IR VM은 대상 하이퍼바이저에서 완벽하게 정상 작동합니다.
 
+아래 절차를 실행하기 전에 원본 서버를 종료하세요.<br>
 
-## 5. 즉각 복구 단계(VMware 백업)
+(1) <b>복구 시점 선택:</b><br>
+<b>Recover → Backup Catalog</b>탭에서 복구에 사용할 시점을 선택합니다.
+
+* Backup Catalog:
+    * 백업 카탈로그에서는 백업본이 아래에 표시됩니다.
+    * 우측 <b>FILTER BACKUPS</b>에서 날짜 및 표시 형식을 지정할 수 있습니다.
+    * 표시되는 대상을 확장하면 해당 시스템의 백업본을 확인할 수 있습니다.
+![screenshot-18](../img/screenshot-18.png)
+
+(2) <b>Instant Recovery</b>버튼 클릭:
+시점 선택 후, 상단의 <b>Instant Recovey</b> 버튼을 클릭하여 복구 설정을 시작합니다.
+
+(3) <b>즉각복구 모드 설정:</b><br>
+검증 모드로 수행하도록 <b>'Recover this VM in Audit Mode'</b> 박스를 체크하지마세요.<br>
+
+(4) <b>복구할 타겟 위치 세부정보 입력:</b>
+* Target Hypervisor Type
+    * 목록에서 타겟 위치 유형을 선택하세요.<br>
+    (VMware Host 또는 Hyper-V Host)
+* Target Location
+    * 목록에서 VMware 또는 Hyper-V 호스트를 선택하세요.
+    * 목록에는 Unitrends 어플라이언스에 추가되어 Windows 대상 시스템과 호환되는 모든 VMware 및 Hyper-V 가상호스트가 표시됩니다.
+    * 예를 들어, ESXi 5.1 호스트는 Windows 2016 대상 시스템에 표시되지 않습니다.
+* (선택사항)Target Resource Pool
+    * VMware 전용이며, VMware 환경에 리소스 풀이 있는 경우에 선택할 수 있습니다.
+* Target Storage
+    * VM 디스크를 생성하는 데 사용될 데이터 저장소(VMware) 또는 볼륨(Hyper-V)을 선택합니다.
+* Target Appliance Network
+    * 목록에서 가상 네트워크를 선택하세요.
+    * 이 목록에는 VMware 또는 Hyper-V 호스트에서 검색되어 사용할 수 있는 모든 네트워크 스위치가 포함되어 있습니다.
+
+(5) <b>복구 설정 검토:</b><br>
+복구 설정을 검토합니다.<br>
+기본적으로 VM 이름은 <b><등록된 Windows 대상 시스템 이름>_restore</b>로 생성됩니다.<br>
+VM 이름을 변경하려면 연필 아이콘을 클릭합니다.<br>
+
+(6) <b>복구 시작:</b><br>
+검토를 마쳤다면 <b>Save</b>를 클릭하여 복구를 시작합니다.
+
+(7) <b>(필요한 경우) 오류나 경고 메세지를 처리:</b><br>
+* Error - 오류가 표시되면 <b>Back</b>을 눌러 문제를 해결하세요.
+* Warning - 경고 메시지가 표시되면 <b>Back</b>을 눌러 경고를 해결하거나, <b>Continue</b>를 눌러 경고 조건을 해결하지 않고 IR VM을 만듭니다.
+
+(8) <b>IR 진행상황 확인:</b><br>
+<b>Recover → Instant Recovery</b> 탭에서 세부 정보를 보고 IR 진행상황을 확인하세요.
+
+## 5. IR 세션 해체
+Unitrends 어플라이언스 성능을 위해서는 가능한 빨리 IR 세션을 해체하는 것이 좋습니다.<br>
+다음의 경우, IR 세션을 종료하면 IR VM이 삭제됩니다.
+* IR VM이 가상 호스트에서 검증(Audit)모드로 실행 중일 경우
+    * IR VM을 실행하려면 즉각복구(Instant Recovery) 모드의 세션이 필요합니다.
+    * IR 세션을 해체하면 Unitrends 어플라이언스에서 IR 세션이 제거되고, Hyper-V 또는 ESXi 호스트에서 IR VM이 제거됩니다.<br> IR VM을 더 이상 사용하지 않을 때까지 세션을 해체하지 마세요.
+* IR VM이 가상 호스트에서 즉각복구(Instant Recovery)모드로 실행 중일 경우
+    * IR 세션을 해체하면 Unitrends 어플라이언스에서 IR 세션이 제거됩니다.
+    * IR VM은 가상 호스트에 남아있습니다.
+    * Unitrends 어플라이언스는 Storage vMotion(VMware) 또는 Storage Live Migration(Hyper-V)을 사용하여 디스크 이미지의 데이터를 대상 Hyper-V 또는 ESXi 호스트에 복사합니다.
+    * 모든 데이터가 마이그레이션되고 VM을 사용할 준비가 될 때까지 IR 세션을 해체하지 마세요. 너무 일찍 제거하면 IR VM이 무효화됩니다(새 VM을 생성하려면 IR을 다시 수행해야 함).
+    

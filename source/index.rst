@@ -56,6 +56,7 @@
    복구/이미지백업의복구.md
    복구/즉각복구(Instant Recovery)
    복구/백업복제본(Replica)
+   복구/Linux복구방식
 
 Indices and tables
 ==================

@@ -32,7 +32,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=037788c3" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=4c642d26" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
@@ -177,6 +177,7 @@
 <li class="toctree-l1"><a class="reference internal" href="%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B0%B1%EC%97%85%EC%9D%98%EB%B3%B5%EA%B5%AC.html">이미지 백업의 복구 절차</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">즉각 복구(Instant Recovery)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%EB%B0%B1%EC%97%85%EB%B3%B5%EC%A0%9C%EB%B3%B8%28Replica%29.html">백업 복제본(Replica)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Linux%EB%B3%B5%EA%B5%AC%EB%B0%A9%EC%8B%9D.html">Linux 복구 방법</a></li>
 </ul>
 
     </div>
@@ -318,8 +319,11 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ir">1. IR 모드</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2. IR 스토리지 할당</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">3. 타겟 대상별 요구사항</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2. IR 스토리지 할당</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2-1. IR 스토리지 할당 방법</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">3. 타겟 대상별 요구사항</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows">4. 즉각 복구 수행(Windows 이미지 백업)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ir-audit">4-1. IR - 검증(Audit)모드 수행 단계</a></li>
 </ul>
@@ -381,9 +385,15 @@
 <li><p>즉각 복구를 위해 할당된 스토리지는 Windows 복제(Replica) 기능에서도 사용할 수 있습니다.</p></li>
 </ul>
 </div></blockquote>
-</section>
 <section id="id2">
-<h2>3. 타겟 대상별 요구사항<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<h3>2-1. IR 스토리지 할당 방법<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>(1) <b>Configure → Appliances</b>탭에서 <b>Storage</b>를 선택하고 <b>Edit</b> 버튼을 클릭합니다.<br>
+(2) <b>Instant Recovery</b>의 비율을 수정하고 <b>Save</b>를 클릭합니다.<br></p>
+<p><img alt="screenshot-33" src="../_images/screenshot-33.png" /></p>
+</section>
+</section>
+<section id="id3">
+<h2>3. 타겟 대상별 요구사항<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <p>IR은 선택한 백업본을 기반으로 VM을 생성합니다.<br>
 IR VM은 ESXi 서버 또는 Hyper-V 서버에 상주할 수 있습니다.<br><br>
 <b>① VMware ESXi 호스트</b></p>
@@ -571,8 +581,11 @@ VM 이름을 변경하려면 연필 아이콘을 클릭합니다.<br></p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ir">1. IR 모드</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2. IR 스토리지 할당</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">3. 타겟 대상별 요구사항</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2. IR 스토리지 할당</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2-1. IR 스토리지 할당 방법</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">3. 타겟 대상별 요구사항</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows">4. 즉각 복구 수행(Windows 이미지 백업)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ir-audit">4-1. IR - 검증(Audit)모드 수행 단계</a></li>
 </ul>
