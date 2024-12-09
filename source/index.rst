@@ -29,14 +29,14 @@
 
 .. toctree::
    :maxdepth: 1
-   :caption: • 에이전트 관리:
+   :caption: • Unitrends에이전트:
 
-   에이전트관리/Linux에이전트설치.md
-   에이전트관리/Linux에이전트제거.md
-   에이전트관리/Windows에이전트설치.md
-   에이전트관리/Windows에이전트제거.md
-   에이전트관리/VolumeCBTDriver설치및제거.md
-   에이전트관리/Windows및Linux에이전트의보안페어링.md
+   Unitrends에이전트/Linux에이전트설치.md
+   Unitrends에이전트/Linux에이전트제거.md
+   Unitrends에이전트/Windows에이전트설치.md
+   Unitrends에이전트/Windows에이전트제거.md
+   Unitrends에이전트/VolumeCBTDriver설치및제거.md
+   Unitrends에이전트/Windows및Linux에이전트의보안페어링.md
 
 .. toctree::
    :maxdepth: 1
@@ -54,9 +54,9 @@
 
    복구/파일백업의복구.md
    복구/이미지백업의복구.md
-   복구/즉각복구(Instant Recovery)
    복구/백업복제본(Replica)
    복구/Linux복구방식
+   복구/IR_윈도우이미지백업
 
 Indices and tables
 ==================
