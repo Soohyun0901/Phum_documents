@@ -92,8 +92,17 @@ VM 복제본을 운영 환경에서 온라인 상태로 전환하여 원본 서�
 ## 6. 이미지 복제본(Replica) 생성
 (1) <b>Recover → Replicas</b>탭으로 이동합니다.<br>
 (2) <b>Create Replicas</b>버튼을 클릭한 뒤, <b>Windows Image Level</b>옵션을 선택합니다.<br>
+![screenshot-39](../img/screenshot-39.png)
+
+
 (3) VM 복제본을 생성할 Windows 서버를 선택한 후 <b>Next</b>를 클릭합니다.<br>
+![screenshot-40](../img/screenshot-40.png)
+
+
 (4) 복제본 옵션을 입력한 후 <b>Next</b>를 클릭합니다.<br>
+![screenshot-41](../img/screenshot-41.png)
+
+
 * Type : 복제본이 생성될 위치 유형을 선택합니다.
     * VMware Host
     * Hyper-V Host<br>(호환 가능한 Hyper-V 가상 호스트가 추가되지 않은 경우 Hyper-V Host 옵션이 표시되지 않습니다.)
