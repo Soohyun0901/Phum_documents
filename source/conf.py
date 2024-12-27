@@ -14,7 +14,9 @@ release = '1.0.0'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+
+
+#extensions = []
 
 #templates_path = ['_templates']
 #exclude_patterns = []   
@@ -26,9 +28,10 @@ extensions = ['myst_parser']  # Markdown 지원
 source_suffix = {'.rst': 'restructuredtext', '.md': 'markdown'}  # Markdown 파일 확장자 설정
 
 
-html_theme = 'sphinx_book_theme'
+#html_theme = 'sphinx_book_theme'
 #html_theme = 'alabaster'  # 기본 제공 테마로 변경
 
+html_theme = 'cloud'
 
 # 다음코드 추가
 #from recommonmark.parser import CommonMarkParser
