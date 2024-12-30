@@ -1,161 +1,97 @@
-
 <!DOCTYPE html>
 
-
-<html lang="ko" data-content_root="../" >
-
+<html lang="ko" data-content_root="../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>상세 스케줄 설정 방법 &#8212; doc 1.0.0 문서</title>
-  
-  
-  
-  <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
-  </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
-  
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=5703f573" />
+    <link rel="stylesheet" type="text/css" href="../_static/conestack.css?v=4f897864" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=4c642d26" />
-  
-  <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
-
-    <script src="../_static/documentation_options.js?v=c940d945"></script>
+    <script src="../_static/documentation_options.js?v=5a0dd2f0"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../_static/translations.js?v=afa94a99"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '기본설정/정책관리';</script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="색인" href="../genindex.html" />
     <link rel="search" title="검색" href="../search.html" />
     <link rel="next" title="백업 대상 등록" href="%EB%B0%B1%EC%97%85%EB%8C%80%EC%83%81%EB%93%B1%EB%A1%9D.html" />
     <link rel="prev" title="백업 대상(Protected Assets)" href="../%EA%B5%AC%EC%84%B1/%EB%B0%B1%EC%97%85%EB%8C%80%EC%83%81%28Protected%20Assets%29.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="ko"/>
-  <meta name="docsearch:version" content="" />
-  </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+<link rel="stylesheet" type="text/css" src="../_static/bootstrap.css" />
+<script src="../_static/bootstrap.bundle.min.js"></script>
+<script src="../_static/conestack.js"></script>
+
+  </head><body>
+
+  <noscript>
+    <style type="text/css">
+      #searchbox,
+      #searchdesc {
+        display: none;
+      }
+      @media (max-width: 768px) {
+        #navbar-toggle {
+          display: none;
+        }
+        #cs-mobile-menu {
+          display: block;
+        }
+        #cs-layout {
+          margin-top: 12rem;
+        }
+        #cs-ext-links {
+          margin-right: 2rem!important;
+        }
+      }
+    </style>
+  </noscript>
 
   
-  
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  <header class="navbar navbar-expand-md" id="header">
+    <nav class="container-xxl flex-wrap flex-md-nowrap p-0" id="cs-nav">
+  <a id="logo" class="navbar-brand p-0 me-2" href="../index.html">
+    <img src="_static/conestack.svg"
+         alt="Logo"
+         width="40px"
+         height="40px" />
+    <span>conestack</span>
+  </a>
 
-  
-  <dialog id="pst-search-dialog">
-    
-<form class="bd-search d-flex align-items-center"
-      action="../search.html"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         placeholder="Search..."
-         aria-label="Search..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-
-  
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-    </header>
-  
-
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
       
-      
-      
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
-        
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-    
-    
+  <div id="nav-search" class="ms-auto">
+    <div id="searchbox" class="nav-item me-3" role="search">
+      <form class="search input-group" action="../search.html" method="get">
+        <input type="text" class="form-control" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+        <button type="submit" 
+                class="bi bi-search input-group-text"
+                btn-title="Search documentation"></button>
+      </form>
+    </div>
   </div>
-  
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
+      
 
-  
-    
-  
+      <button id="navbar-toggle" class="navbar-toggler p-0 me-4" type="button" data-bs-toggle="collapse" data-bs-target="#cs-mobile-menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path></svg>
+      </button>
 
-<a class="navbar-brand logo" href="../index.html">
-  
-  
-  
-  
-  
-  
-    <p class="title logo__title">doc 1.0.0 문서</p>
-  
-</a></div>
-        <div class="sidebar-primary-item">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="검색" aria-label="검색" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">검색</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">• 구성:</span></p>
-<ul class="nav bd-sidenav">
+      <div class="collapse container-fluid m-0 p-3" id="cs-mobile-menu"><nav class="cs-mobile-toc">
+  <p class="caption" role="heading"><span class="caption-text">• 구성:</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../%EA%B5%AC%EC%84%B1/%EC%96%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4%EC%84%A4%EC%A0%95.html">Unitrends 어플라이언스 설정</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%EA%B5%AC%EC%84%B1/%EB%B0%B1%EC%97%85%EC%A0%80%EC%9E%A5%EC%86%8C.html">백업 저장소</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%EA%B5%AC%EC%84%B1/%EC%86%8C%EC%82%B0%EB%8C%80%EC%83%81%28Backup%20Copy%20Target%29.html">소산 대상(Backup Copy Target)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%EA%B5%AC%EC%84%B1/%EB%B0%B1%EC%97%85%EB%8C%80%EC%83%81%28Protected%20Assets%29.html">백업 대상(Protected Assets)</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">• 기본 설정:</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">상세 스케줄 설정 방법</a></li>
+<p class="caption" role="heading"><span class="caption-text">• 기본 설정:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">상세 스케줄 설정 방법</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%EB%B0%B1%EC%97%85%EB%8C%80%EC%83%81%EB%93%B1%EB%A1%9D.html">백업 대상 등록</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81%EB%B0%A9%EB%B2%95.html">모니터링 방법</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%EB%B0%B1%EC%97%85%EB%AA%A8%EB%93%9C%EB%B0%8F%EC%A0%95%EC%B1%85%EC%84%A4%EC%A0%95.html">백업 모드 및 정책 설정</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">• Unitrends에이전트:</span></p>
-<ul class="nav bd-sidenav">
+<p class="caption" role="heading"><span class="caption-text">• Unitrends에이전트:</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../Unitrends%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/Linux%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%EC%84%A4%EC%B9%98.html">Linux 에이전트 설치</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Unitrends%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/Linux%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%EC%A0%9C%EA%B1%B0.html">Linux 에이전트 제거</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Unitrends%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/Windows%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%EC%84%A4%EC%B9%98.html">Windows 에이전트 설치</a></li>
@@ -163,16 +99,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../Unitrends%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/VolumeCBTDriver%EC%84%A4%EC%B9%98%EB%B0%8F%EC%A0%9C%EA%B1%B0.html">Volume CBT Driver 설치 및 제거</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Unitrends%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/Windows%EB%B0%8FLinux%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%EC%9D%98%EB%B3%B4%EC%95%88%ED%8E%98%EC%96%B4%EB%A7%81.html">Windows 및 Linux 에이전트의 보안 페어링</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">• 백업:</span></p>
-<ul class="nav bd-sidenav">
+<p class="caption" role="heading"><span class="caption-text">• 백업:</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../%EB%B0%B1%EC%97%85/%ED%8C%8C%EC%9D%BC%EB%B0%B1%EC%97%85%28File-Level%20Backup%29.html">파일 백업(File-Level Backup)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%EB%B0%B1%EC%97%85/%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B0%B1%EC%97%85%28Image-Level%20Backup%29.html">이미지 백업(Image-Level Backup)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%EB%B0%B1%EC%97%85/%ED%98%B8%EC%8A%A4%ED%8A%B8%EB%B0%B1%EC%97%85%28Host-Level%20Backup%29.html">호스트 백업(Host-Level Backup)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%EB%B0%B1%EC%97%85/NAS%EB%B0%B1%EC%97%85.html">NAS 백업</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%EB%B0%B1%EC%97%85/%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98%EB%B0%B1%EC%97%85%28Application%20Backup%29.html">애플리케이션 백업(Application Backup)</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">• 복구:</span></p>
-<ul class="nav bd-sidenav">
+<p class="caption" role="heading"><span class="caption-text">• 복구:</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%ED%8C%8C%EC%9D%BC%EB%B0%B1%EC%97%85%EC%9D%98%EB%B3%B5%EA%B5%AC.html">파일 백업의 복구 절차</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B0%B1%EC%97%85%EC%9D%98%EB%B3%B5%EA%B5%AC.html">이미지 백업의 복구 절차</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%EB%B0%B1%EC%97%85%EB%B3%B5%EC%A0%9C%EB%B3%B8%28Replica%29.html">Replica 복제본(Windows 이미지백업)</a></li>
@@ -180,238 +116,173 @@
 <li class="toctree-l1"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/IR_%EC%9C%88%EB%8F%84%EC%9A%B0%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B0%B1%EC%97%85.html">Instant Recovery(Windows 이미지백업)</a></li>
 </ul>
 
-    </div>
-</nav></div>
-    </div>
-  
-  
-  <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
-  </div>
-
-
+</nav>
       </div>
-      
-      <main id="main-content" class="bd-main" role="main">
-        
-        
-
-<div class="sbt-scroll-pixel-helper"></div>
-
-          <div class="bd-content">
-            <div class="bd-article-container">
-              
-              <div class="bd-header-article d-print-none">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <span class="fa-solid fa-bars"></span>
-</button></div>
-      
-    </div>
-  
-  
-    <div class="header-article-items__end">
-      
-        <div class="header-article-item">
-
-<div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="이 페이지 다운로드">
-    <i class="fas fa-download"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="../_sources/기본설정/정책관리.md" target="_blank"
-   class="btn btn-sm btn-download-source-button dropdown-item"
-   title="소스 파일 다운로드"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
+    </nav>
+  </header>
   
 
-<span class="btn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="btn__text-container">.md</span>
-</a>
+  <div class="container-xxl my-md-4" id="cs-layout">
+    
+  <aside id="cs-sidebar" class="ms-4 sphinxsidebar"><nav class="cs-nav-toc">
+  <p class="caption" role="heading"><span class="caption-text">• 구성:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../%EA%B5%AC%EC%84%B1/%EC%96%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4%EC%84%A4%EC%A0%95.html">Unitrends 어플라이언스 설정</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%EA%B5%AC%EC%84%B1/%EB%B0%B1%EC%97%85%EC%A0%80%EC%9E%A5%EC%86%8C.html">백업 저장소</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%EA%B5%AC%EC%84%B1/%EC%86%8C%EC%82%B0%EB%8C%80%EC%83%81%28Backup%20Copy%20Target%29.html">소산 대상(Backup Copy Target)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%EA%B5%AC%EC%84%B1/%EB%B0%B1%EC%97%85%EB%8C%80%EC%83%81%28Protected%20Assets%29.html">백업 대상(Protected Assets)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../%EA%B5%AC%EC%84%B1/%EB%B0%B1%EC%97%85%EB%8C%80%EC%83%81%28Protected%20Assets%29.html#id1"><span style="background-color: #dcffe4;">모든 대상 시스템 확인</span></a></li>
+</ul>
 </li>
-      
-      
-      
-      
-      <li>
-<button onclick="window.print()"
-  class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="PDF로 인쇄"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="btn__text-container">.pdf</span>
-</button>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">• 기본 설정:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">상세 스케줄 설정 방법</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%EB%B0%B1%EC%97%85%EB%8C%80%EC%83%81%EB%93%B1%EB%A1%9D.html">백업 대상 등록</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81%EB%B0%A9%EB%B2%95.html">모니터링 방법</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81%EB%B0%A9%EB%B2%95.html#active-jobs">1. Active Jobs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81%EB%B0%A9%EB%B2%95.html#recent-jobs">2. Recent Jobs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81%EB%B0%A9%EB%B2%95.html#reports">3. Reports</a></li>
+</ul>
 </li>
-      
-  </ul>
-</div>
+<li class="toctree-l1"><a class="reference internal" href="%EB%B0%B1%EC%97%85%EB%AA%A8%EB%93%9C%EB%B0%8F%EC%A0%95%EC%B1%85%EC%84%A4%EC%A0%95.html">백업 모드 및 정책 설정</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="%EB%B0%B1%EC%97%85%EB%AA%A8%EB%93%9C%EB%B0%8F%EC%A0%95%EC%B1%85%EC%84%A4%EC%A0%95.html#backup-mode">1. Backup Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%EB%B0%B1%EC%97%85%EB%AA%A8%EB%93%9C%EB%B0%8F%EC%A0%95%EC%B1%85%EC%84%A4%EC%A0%95.html#backup-schedules">2. Backup Schedules</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">• Unitrends에이전트:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Unitrends%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/Linux%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%EC%84%A4%EC%B9%98.html">Linux 에이전트 설치</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Unitrends%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/Linux%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%EC%84%A4%EC%B9%98.html#id1">1. 보안 페어링 요구사항</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Unitrends%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/Linux%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%EC%84%A4%EC%B9%98.html#id2">2. Linux 에이전트 설치 단계</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Unitrends%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/Linux%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%EC%84%A4%EC%B9%98.html#id3">3. 설치 후 확인사항</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Unitrends%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/Linux%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%EC%A0%9C%EA%B1%B0.html">Linux 에이전트 제거</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Unitrends%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/Linux%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%EC%A0%9C%EA%B1%B0.html#id1">1. Linux 에이전트 제거 단계</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Unitrends%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/Windows%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%EC%84%A4%EC%B9%98.html">Windows 에이전트 설치</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Unitrends%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/Windows%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%EC%84%A4%EC%B9%98.html#id1">1. 설치 요구사항</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Unitrends%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/Windows%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%EC%84%A4%EC%B9%98.html#id2">2. 에이전트 보안 페어링 요구사항</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Unitrends%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/Windows%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%EC%84%A4%EC%B9%98.html#id3">3. Windows 에이전트 설치 단계</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Unitrends%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/Windows%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%EC%84%A4%EC%B9%98.html#id4">4. 설치 후 확인사항</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Unitrends%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/Windows%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%EC%84%A4%EC%B9%98.html#id5">5. 설치 후 주의사항</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Unitrends%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/Windows%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%EC%A0%9C%EA%B1%B0.html">Windows 에이전트 제거</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Unitrends%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/Windows%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%EC%A0%9C%EA%B1%B0.html#id1">1. Windows 에이전트 제거 단계</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Unitrends%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/Windows%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%EC%A0%9C%EA%B1%B0.html#id2">2. 결과</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Unitrends%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/VolumeCBTDriver%EC%84%A4%EC%B9%98%EB%B0%8F%EC%A0%9C%EA%B1%B0.html">Volume CBT Driver 설치 및 제거</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Unitrends%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/VolumeCBTDriver%EC%84%A4%EC%B9%98%EB%B0%8F%EC%A0%9C%EA%B1%B0.html#id1">1. 설치 단계</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Unitrends%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/Windows%EB%B0%8FLinux%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%EC%9D%98%EB%B3%B4%EC%95%88%ED%8E%98%EC%96%B4%EB%A7%81.html">Windows 및 Linux 에이전트의 보안 페어링</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">• 백업:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../%EB%B0%B1%EC%97%85/%ED%8C%8C%EC%9D%BC%EB%B0%B1%EC%97%85%28File-Level%20Backup%29.html">파일 백업(File-Level Backup)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B0%B1%EC%97%85/%ED%8C%8C%EC%9D%BC%EB%B0%B1%EC%97%85%28File-Level%20Backup%29.html#id1">1. 파일 백업 요구사항</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B0%B1%EC%97%85/%ED%8C%8C%EC%9D%BC%EB%B0%B1%EC%97%85%28File-Level%20Backup%29.html#id2">2. 파일 백업 정책 생성 단계</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../%EB%B0%B1%EC%97%85/%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B0%B1%EC%97%85%28Image-Level%20Backup%29.html">이미지 백업(Image-Level Backup)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B0%B1%EC%97%85/%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B0%B1%EC%97%85%28Image-Level%20Backup%29.html#windows">1. Windows 이미지 백업 고려 사항</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B0%B1%EC%97%85/%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B0%B1%EC%97%85%28Image-Level%20Backup%29.html#id1">2. Windows 이미지 백업 요구사항</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B0%B1%EC%97%85/%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B0%B1%EC%97%85%28Image-Level%20Backup%29.html#id2">3. 이미지 백업 정책 설정 단계</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../%EB%B0%B1%EC%97%85/%ED%98%B8%EC%8A%A4%ED%8A%B8%EB%B0%B1%EC%97%85%28Host-Level%20Backup%29.html">호스트 백업(Host-Level Backup)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%EB%B0%B1%EC%97%85/NAS%EB%B0%B1%EC%97%85.html">NAS 백업</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%EB%B0%B1%EC%97%85/%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98%EB%B0%B1%EC%97%85%28Application%20Backup%29.html">애플리케이션 백업(Application Backup)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">• 복구:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%ED%8C%8C%EC%9D%BC%EB%B0%B1%EC%97%85%EC%9D%98%EB%B3%B5%EA%B5%AC.html">파일 백업의 복구 절차</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%ED%8C%8C%EC%9D%BC%EB%B0%B1%EC%97%85%EC%9D%98%EB%B3%B5%EA%B5%AC.html#recovery-point">1. 복구 지점(Recovery Point) 선택</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%ED%8C%8C%EC%9D%BC%EB%B0%B1%EC%97%85%EC%9D%98%EB%B3%B5%EA%B5%AC.html#id2">2. 전체 복구 수행</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%ED%8C%8C%EC%9D%BC%EB%B0%B1%EC%97%85%EC%9D%98%EB%B3%B5%EA%B5%AC.html#id3">3. 개별 파일 복구 수행</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B0%B1%EC%97%85%EC%9D%98%EB%B3%B5%EA%B5%AC.html">이미지 백업의 복구 절차</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B0%B1%EC%97%85%EC%9D%98%EB%B3%B5%EA%B5%AC.html#id2">1. 전체 복구 단계</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B0%B1%EC%97%85%EC%9D%98%EB%B3%B5%EA%B5%AC.html#id3">2. 개별 파일 복구 단계</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B0%B1%EC%97%85%EC%9D%98%EB%B3%B5%EA%B5%AC.html#id4">3. 복구 개체 제거</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%EB%B0%B1%EC%97%85%EB%B3%B5%EC%A0%9C%EB%B3%B8%28Replica%29.html">Replica 복제본(Windows 이미지백업)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%EB%B0%B1%EC%97%85%EB%B3%B5%EC%A0%9C%EB%B3%B8%28Replica%29.html#id1">1. 기능 사용 방법</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%EB%B0%B1%EC%97%85%EB%B3%B5%EC%A0%9C%EB%B3%B8%28Replica%29.html#id2">2. 복제본 생성 후 가능한 작업</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%EB%B0%B1%EC%97%85%EB%B3%B5%EC%A0%9C%EB%B3%B8%28Replica%29.html#id3">3. 백업 요구사항</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%EB%B0%B1%EC%97%85%EB%B3%B5%EC%A0%9C%EB%B3%B8%28Replica%29.html#vmware-esxi">4. VMware ESXi에서 복제본 실행을 위한 요구사항</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%EB%B0%B1%EC%97%85%EB%B3%B5%EC%A0%9C%EB%B3%B8%28Replica%29.html#hyper-v">5. Hyper-V에서 복제본 실행을 위한 요구사항</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%EB%B0%B1%EC%97%85%EB%B3%B5%EC%A0%9C%EB%B3%B8%28Replica%29.html#replica">6. 이미지 복제본(Replica) 생성</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/%EB%B0%B1%EC%97%85%EB%B3%B5%EC%A0%9C%EB%B3%B8%28Replica%29.html#id4">7. 복제본 생성 후 단계</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/Linux%EB%B3%B5%EA%B5%AC%EB%B0%A9%EC%8B%9D.html">Linux 복구 방법</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/Linux%EB%B3%B5%EA%B5%AC%EB%B0%A9%EC%8B%9D.html#id1">1. 사전 필수요건</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/Linux%EB%B3%B5%EA%B5%AC%EB%B0%A9%EC%8B%9D.html#id2">2. Linux 복구 단계</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/IR_%EC%9C%88%EB%8F%84%EC%9A%B0%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B0%B1%EC%97%85.html">Instant Recovery(Windows 이미지백업)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/IR_%EC%9C%88%EB%8F%84%EC%9A%B0%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B0%B1%EC%97%85.html#ir">1. IR 모드</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/IR_%EC%9C%88%EB%8F%84%EC%9A%B0%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B0%B1%EC%97%85.html#id1">2. IR 스토리지 할당</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/IR_%EC%9C%88%EB%8F%84%EC%9A%B0%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B0%B1%EC%97%85.html#unitrends">3. 가상 호스트를 Unitrends 어플라이언스에 추가</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/IR_%EC%9C%88%EB%8F%84%EC%9A%B0%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B0%B1%EC%97%85.html#id2">4. 백업 요구사항</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/IR_%EC%9C%88%EB%8F%84%EC%9A%B0%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B0%B1%EC%97%85.html#id3">5. 타겟 대상별 요구사항</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/IR_%EC%9C%88%EB%8F%84%EC%9A%B0%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B0%B1%EC%97%85.html#ir-audit-mode">6. IR-검증 모드(Audit Mode) 수행</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/IR_%EC%9C%88%EB%8F%84%EC%9A%B0%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B0%B1%EC%97%85.html#ir-live-mode">7. IR-즉각 복구 모드(Live Mode) 수행</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/IR_%EC%9C%88%EB%8F%84%EC%9A%B0%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B0%B1%EC%97%85.html#id4">8. IR 진행현황 확인</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../%EB%B3%B5%EA%B5%AC/IR_%EC%9C%88%EB%8F%84%EC%9A%B0%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B0%B1%EC%97%85.html#id5">9. IR 세션 종료</a></li>
+</ul>
+</li>
+</ul>
 
+</nav>
+    
+  </aside>
+    
 
-
-
-<button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
-  title="전체 화면으로보기"
-  data-bs-placement="bottom" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-
-
-
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
-
-
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="검색" aria-label="검색" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
-
-</div></div>
-      
-    </div>
-  
-</div>
-</div>
-              
-              
-
-<div id="jb-print-docs-body" class="onlyprint">
-    <h1>상세 스케줄 설정 방법</h1>
-    <!-- Table of contents -->
-    <div id="print-main-content">
-        <div id="jb-print-toc">
-            
-        </div>
-    </div>
-</div>
-
-              
-                
-<div id="searchbox"></div>
-                <article class="bd-article">
-                  
+    
+      <main class="document cs-main order-1" role="main">
+    
+      <div class="ps-lg-4 mt-3 cs-content">
+        
   <section id="id1">
 <h1>상세 스케줄 설정 방법<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 </section>
 
 
-                </article>
-              
-
-              
-              
-              
-              
-                <footer class="prev-next-footer d-print-none">
-                  
-<div class="prev-next-area">
-    <a class="left-prev"
-       href="../%EA%B5%AC%EC%84%B1/%EB%B0%B1%EC%97%85%EB%8C%80%EC%83%81%28Protected%20Assets%29.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">이전</p>
-        <p class="prev-next-title">백업 대상(Protected Assets)</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="%EB%B0%B1%EC%97%85%EB%8C%80%EC%83%81%EB%93%B1%EB%A1%9D.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">다음</p>
-        <p class="prev-next-title">백업 대상 등록</p>
+
+    
+    
+    </main>
+  </div><div class="container footer" role="contentinfo">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center pt-2 my-4 border-top"><ul class="pb-2 mb-3 nav container border-bottom">
+  <li class="nav-item col-md-6 col">
+    <a href="../%EA%B5%AC%EC%84%B1/%EB%B0%B1%EC%97%85%EB%8C%80%EC%83%81%28Protected%20Assets%29.html"
+       title="이전 장"
+       class="nav-link px-2 text-muted previous-chapter">백업 대상(Protected Assets)</a>
+  </li>
+  <li class="nav-item col-md-6 col text-end">
+    <a href="%EB%B0%B1%EC%97%85%EB%8C%80%EC%83%81%EB%93%B1%EB%A1%9D.html"
+       title="다음 장"
+       class="nav-link px-2 text-muted next-chapter">백업 대상 등록</a>
+  </li>
+</ul>
+      <div class="container text-center text-muted pt-2 pb-2">
+          &#169; Copyright 2024, The Phum.
       </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
-</div>
-                </footer>
-              
-            </div>
-            
-            
-              
-            
-          </div>
-          <footer class="bd-footer-content">
-            
-<div class="bd-footer-content__inner container">
-  
-  <div class="footer-item">
-    
-<p class="component-author">
-으로 The Phum
-</p>
-
-  </div>
-  
-  <div class="footer-item">
-    
-
-  <p class="copyright">
-    
-      © Copyright 2024, The Phum.
-      <br/>
-    
-  </p>
-
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-</div>
-          </footer>
-        
-
-      </main>
-    </div>
-  </div>
-  
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
-  <footer class="bd-footer">
+      <div class="container text-center text-muted pt-2 pb-2">
+        <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3 버전으로 생성되었습니다.
+      </div>
   </footer>
+</div>
+
   </body>
 </html>
