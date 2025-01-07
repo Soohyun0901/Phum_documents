@@ -3,67 +3,36 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-유니트렌드 매뉴얼
+Unitrends documentation
 =================
 
 
 
 .. toctree::
    :maxdepth: 1
-   :caption: 구성:
+   :caption: 백업
 
-   .구성/어플라이언스설정.md
-   .구성/백업저장소.md
-   .구성/소산대상(Backup Copy Target).md
-   .구성/백업대상(Protected Assets).md
+   백업/파일백업
+   백업/이미지백업
+   백업/NAS백업
+   백업/애플리케이션백업
+   
 
 
-.. toctree::
-   :maxdepth: 1
-   :caption: 기본 설정:
 
-   .기본설정/정책관리.md
-   .기본설정/백업대상등록.md
-   .기본설정/모니터링방법.md
-   .기본설정/백업모드및정책설정.md
 
-.. toctree::
-   :maxdepth: 1
-   :caption: 에이전트:
 
-   .Unitrends에이전트/Linux에이전트설치.md
-   .Unitrends에이전트/Linux에이전트제거.md
-   .Unitrends에이전트/Windows에이전트설치.md
-   .Unitrends에이전트/Windows에이전트제거.md
-   .Unitrends에이전트/VolumeCBTDriver설치및제거.md
-   .Unitrends에이전트/Windows및Linux에이전트의보안페어링.md
 
-.. toctree::
-   :maxdepth: 1
-   :caption: 백업:
 
-   .백업/파일백업(File-Level Backup).md
-   .백업/이미지백업(Image-Level Backup).md
-   .백업/호스트백업(Host-Level Backup).md
-   .백업/NAS백업.md
-   .백업/애플리케이션백업(Application Backup).md
 
-.. toctree::
-   :maxdepth: 1
-   :caption: 복구:
 
-   .복구/파일백업의복구.md
-   .복구/이미지백업의복구.md
-   .복구/백업복제본(Replica)
-   .복구/Linux복구방식
-   .복구/IR_윈도우이미지백업
 
-Indices and tables
-==================
+.. Indices and tables
+.. ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
 
 
 
