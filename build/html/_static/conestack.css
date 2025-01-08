@@ -259,7 +259,7 @@ body {
     display: grid;
     gap: 1.5rem;
     grid-template-areas: "sidebar main";
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 2fr 3fr;
   }
 }
 @media (max-width: 768px) {

@@ -3,14 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Unitrends documentation
+유니트렌드 사용자 가이드
 =================
 
 
 
 .. toctree::
    :maxdepth: 1
-   :caption: 백업
+   :caption: 백업 단계
 
    백업/파일백업
    백업/이미지백업
@@ -18,6 +18,13 @@ Unitrends documentation
    백업/애플리케이션백업
    
 
+.. toctree::
+   :maxdepth: 1
+   :caption: 복구 절차
+
+   복구/파일백업활용
+   복구/이미지백업활용
+   
 
 
 
